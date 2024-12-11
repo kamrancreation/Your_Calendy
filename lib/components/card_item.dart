@@ -18,6 +18,7 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
+      flex: 1,
       child: Container(
                             height: 316,
                             width: 359,

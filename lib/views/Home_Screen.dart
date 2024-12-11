@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                height: 1100.h,
+              //  height: 1100.h,
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                     color: const Color(0xff003366),
@@ -227,7 +227,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                height: 1100.h,
+               // height: 1100.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -292,11 +292,12 @@ class _HomePageState extends State<HomePage> {
                                 colorAll: Color(0xff003366),),
                           ],
                         ),
+                        SizedBox(height: 7.h,)
                   ],
                 ),
               ),
               Container(
-                 height: 1100.h,
+                 //height: 1100.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -357,12 +358,12 @@ class _HomePageState extends State<HomePage> {
                             
                           ],
                         ),
+                    SizedBox(height: 7.h,)
                   ],
                 ),
               ),
 
               Container(
-                 height: 1100.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -432,6 +433,7 @@ class _HomePageState extends State<HomePage> {
                             
                           ],
                         ),
+                      SizedBox(height: 7.h,)
                   ],
                 ),
               ),
@@ -482,7 +484,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               Container(
-                height: 1400.h,
+                //height: 1400.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -496,6 +498,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Column(
                   children: [
+                    SizedBox(height: 5.h,),
                     Wrap(
                       spacing: 25,
                       runSpacing: 25,
@@ -538,6 +541,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const Divider(),
               Container(
+                color: Colors.transparent,
                 padding: EdgeInsets.only(top: 20.h, left: 40.w,right: 40.w),
                 //height: 400.h,
                 width: double.maxFinite,
@@ -657,10 +661,15 @@ class _HomePageState extends State<HomePage> {
                         ),),
                         Spacer(),
                         Image.asset("assets/facebook.png",height: 19.h,width: 11.w,),
+                        SizedBox(width: 2.w,),
                         Image.asset("assets/twitter.png",height: 19.h,width: 11.w,),
+                        SizedBox(width: 2.w,),
                         Image.asset("assets/insta.png",height: 19.h,width: 11.w,),
+                        SizedBox(width: 2.w,),
                         Image.asset("assets/linkedin.png",height: 19.h,width: 11.w,),
+                        SizedBox(width: 2.w,),
                         Image.asset("assets/youtube.png",height: 19.h,width: 11.w,),
+                        SizedBox(width: 2.w,),
                       ],
                     ),
                     SizedBox(height: 20.h,)
