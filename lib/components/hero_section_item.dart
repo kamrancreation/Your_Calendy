@@ -13,6 +13,9 @@ class HeroSectionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
     return ListTile(
       leading: Container(
                             height: 50.h,
@@ -25,9 +28,9 @@ class HeroSectionItem extends StatelessWidget {
                               child: Image.asset(imgPath, height: 30.h, width: 30.w,),
                             ),
                           ),
-        title: Text(text,
+                            title: Text(text,
                           style: GoogleFonts.sansita(
-                            fontSize: 7.sp,
+                            fontSize: screenWidth >=600.0 ? 19 : 17,
                             fontWeight: FontWeight.w700,
                             color: Colors.white
                           ),),
