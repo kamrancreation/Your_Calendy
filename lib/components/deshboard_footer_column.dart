@@ -19,7 +19,7 @@ class DeshboardFooterColumn extends StatelessWidget {
     required this.text2,
     required this.text3,
     required this.text4,
-    required this.text5});
+    this.text5 = ""});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class DeshboardFooterColumn extends StatelessWidget {
                             color: Colors.white,
                           ),),
                           SizedBox(height: 7.h,),
-                          Text(text5,
+                           Text(text5,
                           style: GoogleFonts.dmSans(
                             fontSize: 6.sp,
                             fontWeight: FontWeight.w400,

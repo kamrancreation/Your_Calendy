@@ -686,7 +686,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                         SizedBox(width: 2.w,),
                         Image.asset("assets/linkedin.png",height: 19.h,width: 11.w,),
                         SizedBox(width: 2.w,),
-                        Image.asset("assets/youtube.png",height: 19.h,width: 11.w,),
+                         Image.asset("assets/youtube.png",height: 19.h,width: 11.w,),
                         SizedBox(width: 2.w,),
                       ],
                     ),

@@ -5,8 +5,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextField extends StatelessWidget {
   final String text;
-  const CustomTextField({super.key,
-  required this.text});
+  final TextEditingController? controller;
+  final bool obscureText;
+  final Icon? suffixIcon;
+  const CustomTextField({
+  super.key,
+  required this.text,
+  required this.controller,
+   this.obscureText = false,
+   this.suffixIcon
+
+  });
 
 
   @override
@@ -15,18 +24,21 @@ class CustomTextField extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
     return Container(
-                                  height: 50.h,
+                                  height: 40,
                                   decoration: BoxDecoration(
                                   color: Colors.white, 
                                   borderRadius: BorderRadius.circular(10.r),
                                     ),
                                   child: Center(
                                     child: TextFormField(
+                                      controller: controller,
+                                      obscureText: obscureText,
                                       decoration: InputDecoration(
+                                        suffixIcon: suffixIcon,
                                         hintText: text,
                                         hintStyle: GoogleFonts.dmSans(
                                           color: Colors.grey,
-                                          fontSize:screenWidth >=600.0? 15 : 13,
+                                          fontSize: 15,
                                           fontWeight: FontWeight.w400,
                                           ),
                                         border: InputBorder.none, 
