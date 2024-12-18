@@ -6,11 +6,8 @@ import 'package:your_calendy/components/card_item.dart';
 import 'package:your_calendy/components/deshboard_footer_column.dart';
 import 'package:your_calendy/components/hero_section_item.dart';
 import 'package:your_calendy/components/shadow_item.dart';
+import 'package:your_calendy/components/stack_widget.dart';
 import 'package:your_calendy/controllers/DashboardController.dart';
-import 'package:your_calendy/views/Advantages_screen.dart';
-import 'package:your_calendy/views/Features_screen.dart';
-import 'package:your_calendy/views/Home_Screen.dart';
-import 'package:your_calendy/views/Login_screen.dart';
 
 class Deshboard_screen extends StatefulWidget {
   const Deshboard_screen({super.key});
@@ -159,6 +156,9 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       const HeroSectionItem(
                           imgPath: "assets/hero_section8.png",
                           text: "Flexibility and Control"),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: StackWidget()),
                     ],
                   ),
                 ),
@@ -236,6 +236,8 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                             title: "Customization"),
                       ],
                     ),
+                    SizedBox(height: 25.h,),
+                        StackWidget(),
               SizedBox(height: 10.h,),
 
                   ],
@@ -307,7 +309,10 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                                 colorAll: Color(0xff003366),),
                           ],
                         ),
-                        SizedBox(height: 10.h,)
+                        SizedBox(height: 25.h,),
+                        StackWidget(),
+                        SizedBox(height: 15.h,),
+
                   ],
                 ),
               ),
@@ -373,6 +378,8 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                             
                           ],
                         ),
+                        SizedBox(height: 25.h,),
+                        StackWidget(),
                     SizedBox(height: 7.h,)
                   ],
                 ),
@@ -448,6 +455,8 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                             
                           ],
                         ),
+                        SizedBox(height: 25.h,),
+                        StackWidget(),
                       SizedBox(height: 7.h,)
                   ],
                 ),
@@ -531,7 +540,10 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                         ShadowItem(imgUrl: "assets/settings8.png", title: "Subscription Management:", description: "Setup subscription with a one-month free trial.Credit card input required for  subscription. Easy cancellation through the subscription management icon in the control panel. Manage subscription plans. Manage payment methods."),
 
                       ],
-                    )
+                    ),
+                    SizedBox(height: 25.h,),
+                        StackWidget(),
+                    SizedBox(height: 15.h,),
                   ],
                 ),
               ),

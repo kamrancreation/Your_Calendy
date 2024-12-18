@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:your_calendy/components/custom_button.dart';
 import 'package:your_calendy/components/custom_footer.dart';
 import 'package:your_calendy/components/custom_social_button.dart';
 import 'package:your_calendy/components/custom_text_field.dart';
 import 'package:your_calendy/components/divider_row.dart';
+import 'package:your_calendy/controllers/auth_controller.dart';
+import 'package:your_calendy/controllers/sign_up_controller.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -17,6 +20,8 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  final SignupController signupController = Get.put(SignupController());
+  final AuthController authController = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -178,9 +183,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      CustomButton(text: "SIGN UP", ontap: (){
-                
-                      }),
+                      Obx(() {
+              return signupController.isLoading.value
+                  ? CircularProgressIndicator()
+                  : 
+                  CustomButton(text: "SIGN UP", ontap: (){
+                 String name = name_controller.text.trim();
+                        String email = email_controller.text.trim();
+                        String password = password_controller.text.trim();
+
+                        if (name.isNotEmpty &&
+                            email.isNotEmpty &&
+                            password.isNotEmpty) {
+                          signupController.signUp(name, email, password);
+                        } else {
+                          Get.snackbar('Error', 'All fields are required',
+                              snackPosition: SnackPosition.BOTTOM);
+                        }
+                      });
+                  
+            }),
+                      
                       const SizedBox(
                         height: 30,
                       ),
@@ -192,7 +215,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       }, imgIcon: "assets/facebook_icon.png"),
                       const SizedBox(height: 15,),
                       CustomSocialButton(text: "Sign Up With Google", ontap: (){
-                
+                          authController.login();
                       }, imgIcon: "assets/google_icon.png",
                       bgColor:const Color(0xffE8EBFF) ,
                       borderColor: const Color(0xffA9B5FE),),

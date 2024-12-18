@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:your_calendy/components/custom_button.dart';
 import 'package:your_calendy/components/custom_footer.dart';
@@ -7,6 +8,8 @@ import 'package:your_calendy/components/custom_social_button.dart';
 import 'package:your_calendy/components/custom_text_field.dart';
 import 'package:your_calendy/components/deshboard_footer_column.dart';
 import 'package:your_calendy/components/divider_row.dart';
+import 'package:your_calendy/controllers/auth_controller.dart';
+import 'package:your_calendy/controllers/sign_up_controller.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,6 +19,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+    SignupController controller =Get.put(SignupController());
+    AuthController authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -137,9 +143,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    CustomButton(text: "SIGN IN", ontap: (){
-
-                    }),
+                    Obx(() => controller.isLoadingSignIn.value
+                ? Center(child: CircularProgressIndicator()) // Show loader
+                :CustomButton(text: "SIGN IN", ontap: (){
+                  final email = email_controller.text.trim();
+                        final password = password_controller.text.trim();
+                        controller.signInWithEmailAndPassword(email, password);
+                    }), 
+                  ),
                     const SizedBox(
                       height: 30,
                     ),
@@ -150,8 +161,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     }, imgIcon: "assets/facebook_icon.png"),
                     const SizedBox(height: 15,),
-                    CustomSocialButton(text: "Sign In With Google", ontap: (){
-
+                  CustomSocialButton(text: "Sign In With Google", ontap: (){
+                      authController.login();
                     }, imgIcon: "assets/google_icon.png",
                     bgColor:const Color(0xffE8EBFF) ,
                     borderColor: const Color(0xffA9B5FE),),
