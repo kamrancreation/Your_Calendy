@@ -22,9 +22,8 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     
     final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
     return Container(
-                                  height: 40,
+                                  height: 40.sp,
                                   decoration: BoxDecoration(
                                   color: Colors.white, 
                                   borderRadius: BorderRadius.circular(10.r),

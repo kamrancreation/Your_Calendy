@@ -41,7 +41,7 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                 height: 30.h,
               ),
               Container(
-                margin: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
+                margin: EdgeInsets.only(top: 30.h, right: 70.w, left: 70.w),
                 padding: EdgeInsets.only(top: 10.h, right: 50.w, left: 50.w),
                 //height: 700,
                 width:  double.infinity,

@@ -10,7 +10,7 @@ class CustomCraditTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40.h, // Set height using ScreenUtil for responsiveness
+      height: 90.h, // Set height using ScreenUtil for responsiveness
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.r),
@@ -24,7 +24,7 @@ class CustomCraditTextField extends StatelessWidget {
             hintText: "_ _ _-_ _ _ _-_ _ _ _",
             hintStyle: GoogleFonts.dmSans(
               color: Colors.grey,
-              fontSize: 15.sp,
+              fontSize: 15,
               fontWeight: FontWeight.w400,
             ),
             border: OutlineInputBorder(
@@ -46,16 +46,16 @@ class CustomCraditTextField extends StatelessWidget {
                   padding: EdgeInsets.only(right: 4.w),
                   child: Image.asset(
                     'assets/visa_icon.png', // Path to Visa logo in your assets
-                    height: 20.h,
-                    width: 20.w,
+                    height: 40.h,
+                    width: 40.w,
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(right: 12.w),
                   child: Image.asset(
                     'assets/master_card.png', // Path to MasterCard logo in your assets
-                    height: 20.h,
-                    width: 20.w,
+                    height: 40.h,
+                    width: 40.w,
                   ),
                 ),
               ],

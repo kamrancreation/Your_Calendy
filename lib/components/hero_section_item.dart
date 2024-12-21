@@ -16,24 +16,27 @@ class HeroSectionItem extends StatelessWidget {
 
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
-    return ListTile(
-      leading: Container(
-                            height: 50.h,
-                            width: 50.w,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle
-                            ),
-                            child: Center(
-                              child: Image.asset(imgPath, height: 30.h, width: 30.w,),
-                            ),
-                          ),
-                            title: Text(text,
-                          style: GoogleFonts.sansita(
-                            fontSize: screenWidth >=600.0 ? 19 : 17,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white
-                          ),),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+                                height: 90.h,
+                                width: 90.w,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle
+                                ),
+                                child: Center(
+                                  child: Image.asset(imgPath, height: 40.h, width: 40.w,),
+                                ),
+                              ),
+                              Text(text,
+                              style: GoogleFonts.sansita(
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white
+                              ),),
+      ],
     );
   }
 }

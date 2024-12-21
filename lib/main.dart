@@ -33,14 +33,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(500, 800),
+      designSize: const Size(1191, 1440),
       minTextAdapt: true,
       splitScreenMode: true,
-      // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_ , child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-      title: 'Flutter App with Menu',
       home: AllScreens(),
     );
       },

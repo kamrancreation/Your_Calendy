@@ -20,8 +20,9 @@ class CustomSubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                      padding: EdgeInsets.only(top: 30.h, right: 10.w, left: 10.w,bottom: 30.h),
-                width:  160.w,
+                      padding: EdgeInsets.only(top: 50.h, right: 10.w, left: 10.w,bottom: 30.h),
+                      height: 800.h,
+                width:  350.w,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
@@ -43,38 +44,39 @@ class CustomSubscriptionCard extends StatelessWidget {
                     child: Column(
                       
                       children: [
+
                         Text(title,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: 10.sp,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.w800,
                           color: Color(0xff003366),
                         ),
                         textAlign: TextAlign.center,),
-                        SizedBox(height: 15.h,),
+                        SizedBox(height: 25.h,),
                         subtitle !=null? Text(subtitle!,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: 10.sp,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),) : SizedBox(),
 
                         Text(price,
                         style: GoogleFonts.saira(
-                          fontSize: 15.sp,
+                          fontSize: 30.sp,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),),
 
                         Text(text,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: 9.sp,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           color: Colors.white,
                         ),),
-                        SizedBox(height: 25.h,),
+                        SizedBox(height: 50.h,),
                         Container(
-                          height: 50.h,
-                          width: 80.w,
+                          height: 60.h,
+                          width: 150.w,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(30.r)

@@ -18,14 +18,13 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
+ 
     return Flexible(
       flex: 1,
       child: Container(
                             height: 316,
                             width: 359,
-                            padding: EdgeInsets.only(top: 7.h,left: 6.w,right: 6.w,bottom: 7.h),
+                            padding: EdgeInsets.only(top: 7.h,left: 40.w,right: 40.w,bottom: 7.h),
                             decoration: BoxDecoration(
                               border: Border.all(
                                 width: 1.w,
@@ -37,7 +36,7 @@ class CardItem extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.asset(imgUrl,height:screenWidth >=600 ? 70  : 55,width:screenWidth >=600? 70 : 80,),
+                                Image.asset(imgUrl,height:90.h ,width:100.w,),
                                 SizedBox(height: 12.h,),
                                 Text(title,
                                 style: GoogleFonts.plusJakartaSans(

@@ -20,21 +20,22 @@ class ShadowItem extends StatelessWidget {
                       child: Stack(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 45,left: 5),
+                            margin: EdgeInsets.only(top: 45.h,left: 5.w),
                         height: 330,
                               width: 340,
                         decoration:  BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(23.r),
                         color: Color(0xFFEFF0F6)
                                       
                                       ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 40),
+                        margin: EdgeInsets.only(top: 40.h),
+                        padding: EdgeInsets.only(left: 20.w,),
                         height: 330,
-                              width: 340,
+                        width: 340,
                         decoration:  BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(23.r),
                                         gradient: LinearGradient(
                       colors: [ 
                         Color(0xFFE8EBFF),
@@ -51,19 +52,19 @@ class ShadowItem extends StatelessWidget {
                                 SizedBox(height: 70,),
                                 Text(title,
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 25,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.w800,
                                   color: Color(0xff003366),
                                 ),
                                 textAlign: TextAlign.center,),
-                                SizedBox(height: 20,),
+                                //SizedBox(height: 20,),
                                 Text(description,
                                 style:  GoogleFonts.inter(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white
                                 ),
-                                textAlign: TextAlign.center,)
+                                textAlign: TextAlign.start,)
                               ],
                             ),
                       ),

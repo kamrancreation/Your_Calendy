@@ -3,21 +3,29 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StackWidget extends StatelessWidget {
-  const StackWidget({super.key});
+  final double? hight;
+  final double? width;
+  final String text;
+
+  const StackWidget({
+    super.key,
+    required this.text,
+    this.hight,
+    this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height : 50.h,
-      width: 100.w,
+      height : 90.h,
+      width: width,
       child : Stack(
                         children: [
                          Transform(
                            alignment: Alignment.center,
                           transform: Matrix4.rotationZ(-3.1),
                           child :Container(
-                              height: 44.h, // Height of the container
-                              width: 70.w, // Width of the container
+                              height: hight, // Height of the container
+                              width: width, // Width of the container
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(
                                       50.r), // Rounded corners
@@ -28,8 +36,8 @@ class StackWidget extends StatelessWidget {
                           Positioned(
                             top: 0,
                             child: Container(
-                              height: 44.h, 
-                              width: 70.w, 
+                              height: hight, 
+                              width: width, 
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.circular(50.r), 
@@ -46,9 +54,9 @@ class StackWidget extends StatelessWidget {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Sign-up For Free",
+                                  text,
                                   style: GoogleFonts.saira(
-                                    fontSize: 7.sp,
+                                    fontSize: 25.sp,
                                     fontWeight: FontWeight.w400,
                                     color: Color(0xffFFFFFF),
                                   ),

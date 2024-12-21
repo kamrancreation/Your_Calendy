@@ -49,8 +49,8 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                 height: 30.h,
               ),
               Container(
-                margin: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
-                padding: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
+                margin: EdgeInsets.only(top: 20.h, right: 20.w, left: 20.w),
+                padding: EdgeInsets.only(top: 10.h, right: 100.w, left: 100.w),
                 //height: 700,
                 width:  double.infinity,
                 decoration: BoxDecoration(
@@ -70,7 +70,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                       child: Text(
                             "Subscription Management",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600 ? 30 : 18,
+                              fontSize: 37.sp,
                               fontWeight: FontWeight.w600,
                               color: const Color(0xff003366),
                             ),
@@ -83,7 +83,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                           child: Text(
                             "Take Control of Your memberships, All in One Place",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600.0 ? 25 : 15,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xff003366),
                             ),
@@ -131,15 +131,15 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                             children: [
                               Text("Payment detail ->",
                               style: GoogleFonts.plusJakartaSans(
-                                fontSize: 10.sp,
+                                fontSize: 28.sp,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white,
                               ),),
-                              SizedBox(height: 10.h,),
+                              SizedBox(height: 15.h,),
                               Text(
                                 "Email",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -156,7 +156,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                Text(
                                 "Credit Card Number",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -171,7 +171,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                              Text(
                                 "Card Holder Name",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -189,7 +189,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                         Expanded(
                           flex: 1,
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            //mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               
@@ -203,7 +203,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                         Text(
                                 "Expiry Date",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -228,7 +228,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                         Text(
                                 "CVV/CVC",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -247,7 +247,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                Text(
                                 "Country",
                                 style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600.0 ? 15 : 17,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -257,7 +257,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                               ),
                               Obx(() {
                               return Container(
-                                height: 40.h,
+                                height: 90.h,
                                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
@@ -284,7 +284,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                     'Select City',
                                     style: GoogleFonts.dmSans(
                                       color: Colors.grey,
-                                      fontSize: 15,
+                                      fontSize: 14.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
@@ -300,7 +300,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                         city,
                                         style: GoogleFonts.dmSans(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 14.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
@@ -314,7 +314,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                         )
                       ],
                     ),
-                    SizedBox(height: 25.h),
+                    SizedBox(height: 30.h),
                     CustomButton(ontap: (){}, text : "Subscribe"),
                     SizedBox(height: 40.h,),
                   ],
