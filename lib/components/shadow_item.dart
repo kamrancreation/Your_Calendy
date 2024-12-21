@@ -20,22 +20,22 @@ class ShadowItem extends StatelessWidget {
                       child: Stack(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 45.h,left: 5.w),
+                            margin: EdgeInsets.only(top: 45,left: 5),
                         height: 330,
                               width: 340,
                         decoration:  BoxDecoration(
-                        borderRadius: BorderRadius.circular(23.r),
+                        borderRadius: BorderRadius.circular(23),
                         color: Color(0xFFEFF0F6)
                                       
                                       ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 40.h),
-                        padding: EdgeInsets.only(left: 20.w,),
-                        height: 330,
+                        margin: EdgeInsets.only(top: 40),
+                        padding: EdgeInsets.only(left: 20,),
+                        height: 340,
                         width: 340,
                         decoration:  BoxDecoration(
-                        borderRadius: BorderRadius.circular(23.r),
+                        borderRadius: BorderRadius.circular(23),
                                         gradient: LinearGradient(
                       colors: [ 
                         Color(0xFFE8EBFF),

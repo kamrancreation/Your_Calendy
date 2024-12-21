@@ -63,28 +63,29 @@ class _CustomFooterState extends State<CustomFooter> {
                         children: [
                           Text("Find Us on ->",
                           style: GoogleFonts.sansita(
-                            fontSize: 14.sp,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
                           ),),
-                          SizedBox(height: 10.h,),
+                          SizedBox(height: 35.h,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                       Image.asset("assets/instagram_icon.png",height: 60.h,),
+                       Image.asset("assets/instagram_icon.png",height: 63.h,),
                        SizedBox(width: 3.w,),
-                       Image.asset("assets/facebook_icon2.png",height: 60.h,),
+                       Image.asset("assets/facebook_icon2.png",height: 63.h,),
                        SizedBox(width: 3.w,),
-                       Image.asset("assets/linkedin_icon.png",height: 60.h,),
+                       Image.asset("assets/linkedin_icon.png",height: 63.h,),
                        SizedBox(width: 3.w,),
-                       Image.asset("assets/twitter_icon.png",height: 60.h,),
+                       Image.asset("assets/twitter_icon.png",height: 63.h,),
                       
                             ],
                           )
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(width: 30.w,)
                 ],
               ),
             );

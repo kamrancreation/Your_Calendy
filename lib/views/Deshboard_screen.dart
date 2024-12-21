@@ -17,13 +17,11 @@ class Deshboard_screen extends StatefulWidget {
 }
 
 class _Deshboard_screenState extends State<Deshboard_screen> {
-
   final DashboardController controller = Get.put(DashboardController());
 
   @override
   Widget build(BuildContext context) {
-
-     final screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
 
     return SafeArea(
@@ -33,204 +31,243 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Stack(
-                children:[
-               
-                  Positioned(
-                    right: 0,
-                    child: Image.asset('assets/background_image.png',height: 1900.h,)),
+              Container(
+                // height: 1900.h,
+                // width: double.infinity,
+                child: Stack(children: [
+                  // Positioned(
+                  //     right: 0,
+                  //     child: Image.asset(
+                  //       'assets/background_image.png',
+                  //       fit: BoxFit.fitHeight,
+                  //     )
+                  //     ),
                   Container(
-                  height: 1900.h,
-                  width: double.infinity,
-                  child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 50.h,
-                    left: 40.w,
-                    right: 30.w
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                                text: 'Welcome to ',
-                                style: GoogleFonts.saira(
-                                  fontSize: 55.sp,
+                    height: 1900.h,
+                width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+              image: AssetImage('assets/background_image.png'), // Path to your image
+              fit: BoxFit.cover, 
+            ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                         padding:  EdgeInsets.only(top: 50.h, left: 40.w, right: 30.w),    
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                  text: 'Welcome to ',
+                                  style: GoogleFonts.saira(
+                                    fontSize: 53.sp,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white,
+                                  )),
+                              TextSpan(
+                                text: 'YouCalendy',
+                                style: TextStyle(
+                                  fontSize: 53.sp,
                                   fontWeight: FontWeight.w700,
-                                  color: Colors.white,
-                                )),
-                            TextSpan(
-                              text: 'YouCalendy',
-                              style: TextStyle(
-                                fontSize: 55.sp,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xffB4C9DE),
+                                  color: const Color(0xffB4C9DE),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      Text(
-                        "The Ultimate Convenience for Busy People",
-                        style: GoogleFonts.acme(
-                            fontSize: 30.sp,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xffEFF0F6)),
-                      ),
-                      SizedBox(
-                        height: 35.h,
-                      ),
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                                text:
-                                    'Organize your barbershop efficiently and professionally \nwith YouCalendy. Forget about out-of-hours calls and \nconfusion in appointment management.\n',
+                        Text(
+                          "The Ultimate Convenience for Busy People",
+                          style: GoogleFonts.acme(
+                              fontSize: 30.sp,
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xffEFF0F6)),
+                        ),
+                        SizedBox(
+                          height: 35.h,
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                  text:
+                                      'Organize your barbershop efficiently and professionally \nwith YouCalendy. Forget about out-of-hours calls and \nconfusion in appointment management.\n',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 20.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
+                              TextSpan(
+                                text: 'Sign up for free',
                                 style: GoogleFonts.plusJakartaSans(
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                )),
-                            TextSpan(
-                              text: 'Sign up for free',
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize:20.sp,
-                                fontWeight: FontWeight.w400,
-                                color: const Color(0xffFAE635),
-                                decoration: TextDecoration.underline,
+                                  color: const Color(0xffFAE635),
+                                  decoration: TextDecoration.underline,
+                                ),
                               ),
-                            ),
-                            TextSpan(
-                                text:
-                                    ' today and discover how YouCalendy can \ntransform your barbershop',
-                                style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 20.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                )),
-                          ],
+                              TextSpan(
+                                  text:
+                                      ' today and discover how YouCalendy can \ntransform your barbershop',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 20.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
+                            ],
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 60.h,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                           flex: 2,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                StackWidget(text: 'Advantages',hight: 85.h,width: 167.w,),
-                                                  SizedBox(height: 25.h,),
-                                                   const HeroSectionItem(
-                            imgPath: "assets/hero_section2.png",
-                            text: "Appointment History"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section2.png",
-                            text: "Improved Time Management"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section3.png",
-                            text: "Professionalism"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section4.png",
-                            text: "Time Savings"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section5.png",
-                            text: "Increased Trust"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section6.png",
-                            text: "Increased Revenue"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                  const HeroSectionItem(
-                            imgPath: "assets/hero_section7.png",
-                            text: "Improved Communication"),
-                                                  SizedBox(
-                                                    height: 20.h,
-                                                  ),
-                                                   const HeroSectionItem(
-                            imgPath: "assets/hero_section8.png",
-                            text: "Flexibility and Control"),
-                                                    // Align(
-                                                    //   alignment: Alignment.bottomRight,
-                                                    //   child: StackWidget()),
-                              ],
-                            ),
+                        SizedBox(
+                          height: 60.h,
+                        ),
+                        StackWidget(
+                                    text: 'Advantages',
+                                    hight: 85.h,
+                                    width: 167.w,
+                                  ),
+                            ],
                           ),
-                          Expanded(
-                            flex: 2,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                             // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SizedBox(height: 250.h,),
-                            Transform(
-                              alignment: Alignment.center,
-                          transform: Matrix4.rotationZ(-0.1),
-                              child: Text("YOUR TIME",
-                              style: GoogleFonts.aclonica(
-                                fontSize: 20.sp,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white
-                              ),
-                              textAlign: TextAlign.left,),
-                            )
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 110.w,),
-                          Expanded(
-                            flex: 2,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                SizedBox(height: 600.h,),
-                                Transform(
-                              alignment: Alignment.center,
-                          transform: Matrix4.rotationZ(0.1),
-                              child: Text("YOUR CONTROL",
-                              style: GoogleFonts.aclonica(
-                                fontSize: 20.sp,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white
-                              ),
-                              textAlign: TextAlign.left,),
-                            ),
-                            SizedBox(height: 200.h,),
-                                 StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,)
-                                
-                              ],
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 8.w),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    
+                                    SizedBox(
+                                      height: 25.h,
                                     ),
-                ),
-                ] 
+                                    Positioned(
+                                      left: 0,
+                                      child: const HeroSectionItem(
+                                          imgPath: "assets/hero_section2.png",
+                                          text: "Appointment History"),
+                                    ),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section2.png",
+                                        text: "Improved Time Management"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section3.png",
+                                        text: "Professionalism"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section4.png",
+                                        text: "Time Savings"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section5.png",
+                                        text: "Increased Trust"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section6.png",
+                                        text: "Increased Revenue"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section7.png",
+                                        text: "Improved Communication"),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    const HeroSectionItem(
+                                        imgPath: "assets/hero_section8.png",
+                                        text: "Flexibility and Control"),
+                                    // Align(
+                                    //   alignment: Alignment.bottomRight,
+                                    //   child: StackWidget()),
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  // mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      height: 250.h,
+                                    ),
+                                    Transform(
+                                      alignment: Alignment.center,
+                                      transform: Matrix4.rotationZ(-0.1),
+                                      child: Text(
+                                        "YOUR TIME",
+                                        style: GoogleFonts.aclonica(
+                                            fontSize: 20.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 110.w,
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    SizedBox(
+                                      height: 600.h,
+                                    ),
+                                    Transform(
+                                      alignment: Alignment.center,
+                                      transform: Matrix4.rotationZ(0.1),
+                                      child: Text(
+                                        "YOUR CONTROL",
+                                        style: GoogleFonts.aclonica(
+                                            fontSize: 20.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 200.h,
+                                    ),
+                                    StackWidget(
+                                      text: "Sign-up For Free",
+                                      hight: 90.h,
+                                      width: 200.w,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ]),
               ),
               Container(
-              //  height: 1100.h,
+                //  height: 1100.h,
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                     color: const Color(0xff003366),
@@ -269,7 +306,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                     const Wrap(
                       spacing: 25,
                       runSpacing: 25,
-                          alignment: WrapAlignment.center,
+                      alignment: WrapAlignment.center,
                       children: [
                         CardItem(
                             discription:
@@ -303,21 +340,28 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                             title: "Customization"),
                       ],
                     ),
-                    SizedBox(height: 50.h,),
-                StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,),
-              SizedBox(height: 50.h,),
-
+                    SizedBox(
+                      height: 50.h,
+                    ),
+                    StackWidget(
+                      text: "Sign-up For Free",
+                      hight: 85.h,
+                      width: 200.w,
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
                   ],
                 ),
               ),
               Container(
-               // height: 1100.h,
+                // height: 1100.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xFF003366), 
-                      Color(0xFFE8EBFF), 
+                      Color(0xFF003366),
+                      Color(0xFFE8EBFF),
                     ],
                     begin: Alignment.topCenter, // Start of the gradient
                     end: Alignment.bottomCenter, // End of the gradient
@@ -327,212 +371,260 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Let’s Help Your Client’s",
-                    style: GoogleFonts.inter(
-                      fontSize: 40.sp,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),),
-
-                    SizedBox(height: 30.h,),
-                    Text("Don’t remember the haircut you gave your client last time?",
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize:25.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                    ),),
-                    SizedBox(height: 20.h,),
+                    Text(
+                      "Let’s Help Your Client’s",
+                      style: GoogleFonts.inter(
+                        fontSize: 40.sp,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30.h,
+                    ),
+                    Text(
+                      "Don’t remember the haircut you gave your client last time?",
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
                     const Wrap(
-                          spacing: 25,
-                          runSpacing: 25,
-                          alignment: WrapAlignment.center,
-                          children: [
-                            CardItem(
-                                discription:
-                                    "You can  record  not only the type of cut or service you provided but also any other preferences or  specific details, such as the exact length of the cut, the products used, and any additional comments.",
-                                imgUrl: "assets/client_help1.png",
-                                title: "Detailed History"),
-                            CardItem(
-                                discription:
-                                    "Having a detailed history of each client allows you to offer highly personalized service. Clients will  appreciate that you remember their preferences and will feel more valued and understood.",
-                                imgUrl: "assets/client_help2.png",
-                                title: "Personalized Service"),
-                            CardItem(
-                                discription:
-                                    "You can note all the key  points from the last conversation with your client. This allows you to continue the conversation from where you left off, showing your clients that you genuinely care and pay attention to details.",
-                                imgUrl: "assets/client_help3.png",
-                                title: "Continuity in Communication"),
-                            CardItem(
-                                discription:
-                                    "By remembering important details and offering personalized service, your clients will be more  inclined to return to your salon. This attention to detail creates a stronger and longer-lasting relationship with your clients.",
-                                imgUrl: "assets/client_help4.png",
-                                title: "Customer Loyalty",
-                                colorAll:  Color(0xff003366)),
-                            CardItem(
-                                discription:
-                                    "All notes you take in YouCalendy are completely private and only you can access them. This  ensures that your clients' information is secure and confidential.",
-                                imgUrl: "assets/client_help5.png",
-                                title: "Private and Secure Notes",
-                                colorAll: Color(0xff003366),),
-                          ],
+                      spacing: 25,
+                      runSpacing: 25,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        CardItem(
+                            discription:
+                                "You can  record  not only the type of cut or service you provided but also any other preferences or  specific details, such as the exact length of the cut, the products used, and any additional comments.",
+                            imgUrl: "assets/client_help1.png",
+                            title: "Detailed History"),
+                        CardItem(
+                            discription:
+                                "Having a detailed history of each client allows you to offer highly personalized service. Clients will  appreciate that you remember their preferences and will feel more valued and understood.",
+                            imgUrl: "assets/client_help2.png",
+                            title: "Personalized Service"),
+                        CardItem(
+                            discription:
+                                "You can note all the key  points from the last conversation with your client. This allows you to continue the conversation from where you left off, showing your clients that you genuinely care and pay attention to details.",
+                            imgUrl: "assets/client_help3.png",
+                            title: "Continuity in Communication"),
+                        CardItem(
+                            discription:
+                                "By remembering important details and offering personalized service, your clients will be more  inclined to return to your salon. This attention to detail creates a stronger and longer-lasting relationship with your clients.",
+                            imgUrl: "assets/client_help4.png",
+                            title: "Customer Loyalty",
+                            colorAll: Color(0xff003366)),
+                        CardItem(
+                          discription:
+                              "All notes you take in YouCalendy are completely private and only you can access them. This  ensures that your clients' information is secure and confidential.",
+                          imgUrl: "assets/client_help5.png",
+                          title: "Private and Secure Notes",
+                          colorAll: Color(0xff003366),
                         ),
-                        SizedBox(height: 50.h,),
-                        StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,),
-                        SizedBox(height: 50.h,),
-
+                      ],
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
+                    StackWidget(
+                      text: "Sign-up For Free",
+                      hight: 85.h,
+                      width: 200.w,
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
                   ],
                 ),
               ),
               Container(
-                 //height: 1100.h,
+                //height: 1100.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [ 
+                    colors: [
                       Color(0xFFE8EBFF),
-                      Color(0xFF003366), 
+                      Color(0xFF003366),
                     ],
                     begin: Alignment.topCenter, // Start of the gradient
                     end: Alignment.bottomCenter, // End of the gradient
                   ),
                 ),
                 child: Column(
-                 // mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 50.h,),
-                    Text("Do your clients get nervous when explaining their \nhaircut  and sometimes don’t express themselves well?",
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.w400,
-                      color: const Color(0xff003366),
+                    SizedBox(
+                      height: 50.h,
                     ),
-                    textAlign: TextAlign.center,),
-
-                    SizedBox(height: 30.h,),
+                    Text(
+                      "Do your clients get nervous when explaining their \nhaircut  and sometimes don’t express themselves well?",
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 30.sp,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xff003366),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 30.h,
+                    ),
                     const Wrap(
-                          spacing: 25,
-                          runSpacing: 25,
-                          alignment: WrapAlignment.center,
-                          children: [
-                            CardItem(
-                                discription:
-                                    "Many clients feel nervous or  unsure when trying to explain what they want. Allowing them to write a detailed description and attach images from home makes them feel more  relaxed and confident that they will get exactly what they want.",
-                                imgUrl: "assets/advantages7.png",
-                                title: "Reduction of Client Anxiety",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "A written description and a reference image eliminate misunderstandings and ensure that you understand exactly what the client wants, improving the accuracy of the service.",
-                                imgUrl: "assets/advantages8.png",
-                                title: "Clarity in Communication",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "From your salon, you can  review scheduled appointments, read descriptions, and see reference photos  before the client arrives. This allows you to better prepare and plan your  time more efficiently.",
-                                imgUrl: "assets/advantages9.png",
-                                title: "Preparation and Efficiency",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "When the client arrives at  your salon, you can assure them that you know exactly what they need. This preparation and attention to detail increase client satisfaction and improve service quality.",
-                                imgUrl: "assets/advantages10.png",
-                                title: "Improved Service Quality"),
-                            CardItem(
-                                discription: "Having all the necessary  information in advance allows you to work faster and more efficiently,  which is valuable for both your production times and the client’s  experience.",
-                                imgUrl: "assets/advantages11.png",
-                                title: "Time Optimization"),
-                            
-                          ],
+                      spacing: 25,
+                      runSpacing: 25,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        CardItem(
+                          discription:
+                              "Many clients feel nervous or  unsure when trying to explain what they want. Allowing them to write a detailed description and attach images from home makes them feel more  relaxed and confident that they will get exactly what they want.",
+                          imgUrl: "assets/advantages7.png",
+                          title: "Reduction of Client Anxiety",
+                          colorAll: Color(0xff003366),
                         ),
-                        SizedBox(height: 50.h,),
-                       StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,),
-                    SizedBox(height: 50.h,)
+                        CardItem(
+                          discription:
+                              "A written description and a reference image eliminate misunderstandings and ensure that you understand exactly what the client wants, improving the accuracy of the service.",
+                          imgUrl: "assets/advantages8.png",
+                          title: "Clarity in Communication",
+                          colorAll: Color(0xff003366),
+                        ),
+                        CardItem(
+                          discription:
+                              "From your salon, you can  review scheduled appointments, read descriptions, and see reference photos  before the client arrives. This allows you to better prepare and plan your  time more efficiently.",
+                          imgUrl: "assets/advantages9.png",
+                          title: "Preparation and Efficiency",
+                          colorAll: Color(0xff003366),
+                        ),
+                        CardItem(
+                            discription:
+                                "When the client arrives at  your salon, you can assure them that you know exactly what they need. This preparation and attention to detail increase client satisfaction and improve service quality.",
+                            imgUrl: "assets/advantages10.png",
+                            title: "Improved Service Quality"),
+                        CardItem(
+                            discription:
+                                "Having all the necessary  information in advance allows you to work faster and more efficiently,  which is valuable for both your production times and the client’s  experience.",
+                            imgUrl: "assets/advantages11.png",
+                            title: "Time Optimization"),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
+                    StackWidget(
+                      text: "Sign-up For Free",
+                      hight: 85.h,
+                      width: 200.w,
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    )
                   ],
                 ),
               ),
-
               Container(
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [ 
+                    colors: [
                       Color(0xFFE8EBFF),
-                      Color(0xFF003366), 
+                      Color(0xFF003366),
                     ],
                     begin: Alignment.topCenter, // Start of the gradient
                     end: Alignment.bottomCenter, // End of the gradient
                   ),
                 ),
                 child: Column(
-                 // mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    
-                    SizedBox(height: 50.h,),
-                    Text("Benefits of Mass SMS with YouCalendy:",
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 40.sp,
-                      fontWeight: FontWeight.w700,
-                      color: const Color(0xff003366),
+                    SizedBox(
+                      height: 50.h,
                     ),
-                    textAlign: TextAlign.center,),
-                    SizedBox(height: 35.h,),
-                    Text("Do you close your salon and want to notify all your clients?",
-                    style: GoogleFonts.plusJakartaSans(
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.w400,
-                      color: const Color(0xff003366),
+                    Text(
+                      "Benefits of Mass SMS with YouCalendy:",
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 40.sp,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xff003366),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,),
-
-                    SizedBox(height: 30.h,),
+                    SizedBox(
+                      height: 35.h,
+                    ),
+                    Text(
+                      "Do you close your salon and want to notify all your clients?",
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 25.sp,
+                        fontWeight: FontWeight.w400,
+                        color: const Color(0xff003366),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 30.h,
+                    ),
                     const Wrap(
-                          spacing: 25,
-                          runSpacing: 25,
-                          alignment: WrapAlignment.center,
-                          children: [
-                            CardItem(
-                                discription:
-                                    "SMS messages are read almost  immediately after being received, ensuring your clients get the  information in real-time. This speed is crucial for communicating last-minute closures or schedule changes effectively.",
-                                imgUrl: "assets/benefit1.png",
-                                title: "Immediacy and Effectiveness",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "By sending SMS messages, you  reach all your clients without needing them to have internet access. This   is especially useful to ensure everyone, regardless of their communication   preferences, receives your messages.",
-                                imgUrl: "assets/benefit2.png",
-                                title: "Wide Coverage",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "You can schedule messages to   be sent at specific times, ensuring the information reaches at the most  appropriate moment. This allows you to plan in advance and ensure important messages are not forgotten.",
-                                imgUrl: "assets/benefit3.png",
-                                title: "Automation and Scheduling",
-                                colorAll: Color(0xff003366),),
-                            CardItem(
-                                discription:
-                                    "YouCalendy offers access to a   collection of strategic marketing messages designed to increase your   revenue. These messages have been meticulously developed to help you achieve your business goals, whether promoting special offers, new  services, or events in your salon.",
-                                imgUrl: "assets/benefit4.png",
-                                title: "Strategic Marketing Messages"),
-                            CardItem(
-                                discription: "You have complete freedom to create your personalized messages tailored to each of your needs. You can  address your clients by name, offer exclusive promotions based on their   service history, and much more.",
-                                imgUrl: "assets/benefit5.png",
-                                title: "Personalization"),
-                            
-                          ],
+                      spacing: 25,
+                      runSpacing: 25,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        CardItem(
+                          discription:
+                              "SMS messages are read almost  immediately after being received, ensuring your clients get the  information in real-time. This speed is crucial for communicating last-minute closures or schedule changes effectively.",
+                          imgUrl: "assets/benefit1.png",
+                          title: "Immediacy and Effectiveness",
+                          colorAll: Color(0xff003366),
                         ),
-                        SizedBox(height: 50.h,),
-                   StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,),
-                      SizedBox(height: 50.h,)
+                        CardItem(
+                          discription:
+                              "By sending SMS messages, you  reach all your clients without needing them to have internet access. This   is especially useful to ensure everyone, regardless of their communication   preferences, receives your messages.",
+                          imgUrl: "assets/benefit2.png",
+                          title: "Wide Coverage",
+                          colorAll: Color(0xff003366),
+                        ),
+                        CardItem(
+                          discription:
+                              "You can schedule messages to   be sent at specific times, ensuring the information reaches at the most  appropriate moment. This allows you to plan in advance and ensure important messages are not forgotten.",
+                          imgUrl: "assets/benefit3.png",
+                          title: "Automation and Scheduling",
+                          colorAll: Color(0xff003366),
+                        ),
+                        CardItem(
+                            discription:
+                                "YouCalendy offers access to a   collection of strategic marketing messages designed to increase your   revenue. These messages have been meticulously developed to help you achieve your business goals, whether promoting special offers, new  services, or events in your salon.",
+                            imgUrl: "assets/benefit4.png",
+                            title: "Strategic Marketing Messages"),
+                        CardItem(
+                            discription:
+                                "You have complete freedom to create your personalized messages tailored to each of your needs. You can  address your clients by name, offer exclusive promotions based on their   service history, and much more.",
+                            imgUrl: "assets/benefit5.png",
+                            title: "Personalization"),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
+                    StackWidget(
+                      text: "Sign-up For Free",
+                      hight: 85.h,
+                      width: 200.w,
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    )
                   ],
                 ),
               ),
-
               Container(
                 height: 325.h,
                 width: double.infinity,
-                 decoration: const BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
                       'assets/background2.png',
@@ -542,46 +634,45 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                 ),
                 child: Center(
                   child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                                text: 'FEATURES THAT',
-                                style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 18.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: const Color(0xff003366),
-                                  decoration: TextDecoration.underline,
-                                )),
-                            TextSpan(
-                              text: ' YouCalendy ',
-                              style: GoogleFonts.pottaOne(
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xff0421D0),
-                              ),
-                            ),
-                            TextSpan(
-                                text: 'OFFERS',
-                                style: GoogleFonts.plusJakartaSans(
-                                   fontSize: 18.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: const Color(0xff003366),
-                                  decoration: TextDecoration.underline,
-                                ))
-                          ],
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                            text: 'FEATURES THAT',
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xff003366),
+                              decoration: TextDecoration.underline,
+                            )),
+                        TextSpan(
+                          text: ' YouCalendy ',
+                          style: GoogleFonts.pottaOne(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w700,
+                            color: const Color(0xff0421D0),
+                          ),
                         ),
-                      ),
+                        TextSpan(
+                            text: 'OFFERS',
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xff003366),
+                              decoration: TextDecoration.underline,
+                            ))
+                      ],
+                    ),
+                  ),
                 ),
               ),
-
               Container(
                 //height: 1400.h,
                 width: double.maxFinite,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [ 
+                    colors: [
                       Color(0xFF6993BE),
-                      Color(0xFF003366), 
+                      Color(0xFF003366),
                     ],
                     begin: Alignment.topCenter, // Start of the gradient
                     end: Alignment.bottomCenter, // End of the gradient
@@ -589,217 +680,323 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(height: 40.h,),
+                    SizedBox(
+                      height: 40.h,
+                    ),
                     const Wrap(
                       spacing: 25,
                       runSpacing: 25,
                       alignment: WrapAlignment.center,
                       children: [
-                        const ShadowItem(imgUrl: "assets/settings1.png", title: "Control Panel:", description: ". Central hub for all  functionalities\n. Icons on the left side for easy  navigation\n. Icons expand to show details on the right side."),
-                        ShadowItem(imgUrl: "assets/settings2.png", title: "Profile Configuration:", description: ". Edit business name, phone number, and description\n. Create customized booking  links\n. Set business hours and location on maps\n. Upload profile icon, header, and photos\n. Preview profile as clients will see it\n. Create and manage services with names, prices, and durations."),
-                        ShadowItem(imgUrl: "assets/settings3.png", title: "Appointment Scheduling:", description: ". Calendar view to see clients appointments\n. Ability to schedule appointments manually\n. Service selection with time slot allocation\n. Private notes on client  appointments\n. Option to register new clients."),
-
-                        ShadowItem(imgUrl: "assets/settings4.png", title: "Client Management:", description: ". Button to add new clients\n. Fields for client's name, last name, phone number, and email\n. Private notes for each client\n. Ability to view notes during  appointments."),
-
-                        ShadowItem(imgUrl: "assets/settings5.png", title: "Team Management:", description: ". Add team members and their available services\n. Set working hours for each team  member\n. Clients can choose their preferred barber and see their availability."),
-                        ShadowItem(imgUrl: "assets/settings6.png", title: "Marketing:", description: ". Send personalized mass messages via SMS\n. Schedule feature for mass  messaging\n. Set and manage promotions."),
-                        ShadowItem(imgUrl: "assets/settings7.png", title: "Client Interaction:", description: ". Clients access barber profiles through provided links . View services, prices,location, and contact information\n. Book appointments online by selecting services and available slots\n. Option to provide reference photos for haircuts\n. Option to write detailed instructions for haircuts\n. Registration process with acceptance of terms of use and privacy policy."),
-                        ShadowItem(imgUrl: "assets/settings8.png", title: "Subscription Management:", description: ". Setup subscription with a one-month free trial\n. Credit card input required for  subscription\n. Easy cancellation through the subscription management icon in the control panel\n. Manage subscription plans\n. Manage payment methods."),
+                        const ShadowItem(
+                            imgUrl: "assets/settings1.png",
+                            title: "Control Panel:",
+                            description:
+                                ". Central hub for all  functionalities\n. Icons on the left side for easy  navigation\n. Icons expand to show details on the right side."),
+                        ShadowItem(
+                            imgUrl: "assets/settings2.png",
+                            title: "Profile Configuration:",
+                            description:
+                                ". Edit business name, phone number, and description\n. Create customized booking  links\n. Set business hours and location on maps\n. Upload profile icon, header, and photos\n. Preview profile as clients will see it\n. Create and manage services with names, prices, and durations."),
+                        ShadowItem(
+                            imgUrl: "assets/settings3.png",
+                            title: "Appointment Scheduling:",
+                            description:
+                                ". Calendar view to see clients appointments\n. Ability to schedule appointments manually\n. Service selection with time slot allocation\n. Private notes on client  appointments\n. Option to register new clients."),
+                        ShadowItem(
+                            imgUrl: "assets/settings4.png",
+                            title: "Client Management:",
+                            description:
+                                ". Button to add new clients\n. Fields for client's name, last name, phone number, and email\n. Private notes for each client\n. Ability to view notes during  appointments."),
+                        ShadowItem(
+                            imgUrl: "assets/settings5.png",
+                            title: "Team Management:",
+                            description:
+                                ". Add team members and their available services\n. Set working hours for each team  member\n. Clients can choose their preferred barber and see their availability."),
+                        ShadowItem(
+                            imgUrl: "assets/settings6.png",
+                            title: "Marketing:",
+                            description:
+                                ". Send personalized mass messages via SMS\n. Schedule feature for mass  messaging\n. Set and manage promotions."),
+                        ShadowItem(
+                            imgUrl: "assets/settings7.png",
+                            title: "Client Interaction:",
+                            description:
+                                ". Clients access barber profiles through provided links . View services, prices,location, and contact information\n. Book appointments online by selecting services and available slots\n. Option to provide reference photos for haircuts\n. Option to write detailed instructions for haircuts\n. Registration process with acceptance of terms of use and privacy policy."),
+                        ShadowItem(
+                            imgUrl: "assets/settings8.png",
+                            title: "Subscription Management:",
+                            description:
+                                ". Setup subscription with a one-month free trial\n. Credit card input required for  subscription\n. Easy cancellation through the subscription management icon in the control panel\n. Manage subscription plans\n. Manage payment methods."),
                       ],
                     ),
-                    SizedBox(height: 50.h,),
-                  StackWidget(text: "Sign-up For Free", hight: 85.h,width: 200.w,),
-                    SizedBox(height: 50.h,),
-                  ],
-                ),
-              ),
-              Container(
-                color: Color(0xff003366),
-                child: Column(
-                  children: [
-                     const Divider(),
-              Container(
-                color: Color(0xff003366),
-                height: 250.h,
-                width: double.maxFinite,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(width: 50.w,),
-                    Image.asset("assets/logo.png",height: 50.h,width: 120.w,),
-                    SizedBox(width: 100.w,),
-                    Expanded(
-                      child: Text("Organize your barbershop efficiently and professionally with YouCalendy. Forget about out-of-hours calls and confusion in appointment management.",
-                      style: GoogleFonts.plusJakartaSans(
-                        fontSize:screenWidth >=600 ? 20 : 14,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xffE8EBFF)
-                      ),),
+                    SizedBox(
+                      height: 50.h,
                     ),
-                    SizedBox(width: 10.w,),
-
+                    StackWidget(
+                      text: "Sign-up For Free",
+                      hight: 85.h,
+                      width: 200.w,
+                    ),
+                    SizedBox(
+                      height: 50.h,
+                    ),
                   ],
                 ),
               ),
-              const Divider(),
               Container(
-                color: Colors.transparent,
-                padding: EdgeInsets.only(top: 20.h, left: 40.w,right: 40.w),
-                //height: 400.h,
-                width: double.maxFinite,
+                color: Color(0xff003366),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        const Expanded(
-                          flex: 1,
-                          child: DeshboardFooterColumn(
-                            title: "Product",
-                            text1: "Features",
-                            text2: "Sellers",
-                            text3: "Case studies",
-                            text4: "Reviews", 
-                            text5: "Updates"
-                            ),
-                        ),
-                        SizedBox(width: 15.w,),
-                        const Expanded(
-                          flex: 1,
-                          child: DeshboardFooterColumn(
-                            title: "Company",
-                            text1: "About",
-                            text2: "Contact us",
-                            text3: "Careers",
-                            text4: "Culture", 
-                            text5: "Blog"
-                            ),
-                        ),
-                          SizedBox(width: 15.w,),
-                          const Expanded(
-                            flex: 1,
-                            child: DeshboardFooterColumn(
-                            title: "Support",
-                            text1: "Getting started",
-                            text2: "Help center",
-                            text3: "Server status",
-                            text4: "Report a bug", 
-                            text5: "Chat support"
-                            ),
+                    const Divider(),
+                    Container(
+                      color: Color(0xff003366),
+                      height: 250.h,
+                      width: double.maxFinite,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 50.w,
                           ),
-                    
-                          SizedBox(width: 15.w,),
-                          const Expanded(
-                            flex: 1,
-                            child: DeshboardFooterColumn(
-                            title: "Downloads",
-                            text1: "IOS App",
-                            text2: "Android",
-                            text3: "Mac App",
-                            text4: "Windows App", 
-                            text5: "Chrome OS App"
-                            ),
+                          Image.asset(
+                            "assets/logo.png",
+                            height: 50.h,
+                            width: 120.w,
                           ),
-                          SizedBox(width: 15.w,),
+                          SizedBox(
+                            width: 100.w,
+                          ),
                           Expanded(
-                            flex: 1,
-                            child: Container(
-                              color: Colors.transparent,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Subscribe to our newsletter",
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 15.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
-                                ),),
-                                SizedBox(height: 20.h,),
-                                Text("Subscribe to our newsletter",
+                            child: Text(
+                              "Organize your barbershop efficiently and professionally with YouCalendy. Forget about out-of-hours calls and confusion in appointment management.",
+                              style: GoogleFonts.plusJakartaSans(
+                                  fontSize: screenWidth >= 600 ? 20 : 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: const Color(0xffE8EBFF)),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10.w,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Divider(),
+                    Container(
+                      color: Colors.transparent,
+                      padding:
+                          EdgeInsets.only(top: 20.h, left: 40.w, right: 40.w),
+                      //height: 400.h,
+                      width: double.maxFinite,
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              const Expanded(
+                                flex: 1,
+                                child: DeshboardFooterColumn(
+                                    title: "Product",
+                                    text1: "Features",
+                                    text2: "Sellers",
+                                    text3: "Case studies",
+                                    text4: "Reviews",
+                                    text5: "Updates"),
+                              ),
+                              SizedBox(
+                                width: 15.w,
+                              ),
+                              const Expanded(
+                                flex: 1,
+                                child: DeshboardFooterColumn(
+                                    title: "Company",
+                                    text1: "About",
+                                    text2: "Contact us",
+                                    text3: "Careers",
+                                    text4: "Culture",
+                                    text5: "Blog"),
+                              ),
+                              SizedBox(
+                                width: 15.w,
+                              ),
+                              const Expanded(
+                                flex: 1,
+                                child: DeshboardFooterColumn(
+                                    title: "Support",
+                                    text1: "Getting started",
+                                    text2: "Help center",
+                                    text3: "Server status",
+                                    text4: "Report a bug",
+                                    text5: "Chat support"),
+                              ),
+                              SizedBox(
+                                width: 15.w,
+                              ),
+                              const Expanded(
+                                flex: 1,
+                                child: DeshboardFooterColumn(
+                                    title: "Downloads",
+                                    text1: "IOS App",
+                                    text2: "Android",
+                                    text3: "Mac App",
+                                    text4: "Windows App",
+                                    text5: "Chrome OS App"),
+                              ),
+                              SizedBox(
+                                width: 15.w,
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Subscribe to our newsletter",
+                                        style: GoogleFonts.dmSans(
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20.h,
+                                      ),
+                                      Text(
+                                        "Subscribe to our newsletter",
+                                        style: GoogleFonts.dmSans(
+                                          fontSize: 12.sp,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20.h,
+                                      ),
+                                      Container(
+                                        height: 70.h,
+                                        width: 300.w,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(50.r),
+                                        ),
+                                        child: Center(
+                                          child: TextFormField(
+                                            decoration: InputDecoration(
+                                              hintText: 'Enter your email',
+                                              hintStyle: GoogleFonts.dmSans(
+                                                color: Color(0xff003366),
+                                                fontSize: 14.sp,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                              border: InputBorder.none,
+                                              contentPadding: EdgeInsets.only(
+                                                  bottom: 10.h, left: 10.w),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 30.h,
+                                      ),
+                                      Container(
+                                        height: 54.h,
+                                        width: 100.w,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xffE8EBFF),
+                                          borderRadius:
+                                              BorderRadius.circular(50.r),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            "Subscribe",
+                                            style: GoogleFonts.dmSans(
+                                              color: const Color(0xFF003366),
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 30.h,
+                          ),
+                          const Divider(),
+                          SizedBox(
+                            height: 20.h,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "Copyright © 2024 YouCalendy | All Rights Reserved ",
                                 style: GoogleFonts.dmSans(
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white,
-                                ),),
-                                SizedBox(height: 20.h,),
-                                  Container(
-                                    height: 70.h,
-                                    width: 300.w,
-                                    decoration: BoxDecoration(
-                                    color: Colors.white, 
-                                    borderRadius: BorderRadius.circular(50.r),
-                                      ),
-                                    child: Center(
-                                      child: TextFormField(
-                                        decoration: InputDecoration(
-                                          hintText: 'Enter your email',
-                                          hintStyle: GoogleFonts.dmSans(
-                                            color: Color(0xff003366),
-                                            fontSize: 14.sp,
-                                            fontWeight: FontWeight.w400,
-                                            ),
-                                          border: InputBorder.none, 
-                                          contentPadding: EdgeInsets.only(bottom: 10.h,left: 10.w),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 30.h,),
-                                  Container(
-                                     height: 54.h,
-                                    width: 100.w,
-                                    decoration: BoxDecoration(
-                                    color: const Color(0xffE8EBFF), 
-                                    borderRadius: BorderRadius.circular(50.r),
-                                      ),
-                                    child: Center(
-                                      child: Text("Subscribe",
-                                      style: GoogleFonts.dmSans(
-                                        color: const Color(0xFF003366),
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w500,
-                                      ),),
-                                    ),
-                                  )
-                                ],
+                                ),
                               ),
-                            ),
+                              const Spacer(),
+                              Image.asset(
+                                "assets/facebook.png",
+                                height: 20.h,
+                                width: 13.w,
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Image.asset(
+                                "assets/twitter.png",
+                                height: 20.h,
+                                width: 13.w,
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Image.asset(
+                                "assets/insta.png",
+                                height: 20.h,
+                                width: 13.w,
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Image.asset(
+                                "assets/linkedin.png",
+                                height: 20.h,
+                                width: 13.w,
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Image.asset(
+                                "assets/youtube.png",
+                                height: 20.h,
+                                width: 13.w,
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20.h,
                           )
-                      ],
-                    ),
-                    SizedBox(height: 30.h,),
-                    const Divider(),
-                    SizedBox(height: 20.h,),
-                    Row(
-                      children: [
-                        Text("Copyright © 2024 YouCalendy | All Rights Reserved ",
-                        style: GoogleFonts.dmSans(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
-                        ),),
-                        const Spacer(),
-                        Image.asset("assets/facebook.png",height: 20.h,width: 13.w,),
-                        SizedBox(width: 2.w,),
-                        Image.asset("assets/twitter.png",height: 20.h,width: 13.w,),
-                        SizedBox(width: 2.w,),
-                        Image.asset("assets/insta.png",height: 20.h,width: 13.w,),
-                        SizedBox(width: 2.w,),
-                        Image.asset("assets/linkedin.png",height: 20.h,width: 13.w,),
-                        SizedBox(width: 2.w,),
-                         Image.asset("assets/youtube.png",height: 20.h,width: 13.w,),
-                        SizedBox(width: 2.w,),
-                      ],
-                    ),
-                    SizedBox(height: 20.h,)
-                  ],
-                ),
-                
-              )
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
-             
             ],
           ),
         ),

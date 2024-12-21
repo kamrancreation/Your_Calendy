@@ -44,9 +44,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(
               child: Container(
-                padding: EdgeInsets.only(top: 10.h, right: 70, left: 70),
+                padding: EdgeInsets.only(top: 10.h, right: 100.w, left: 100.w),
                 //height: 700,
-                width: 600.w,
+                width: 550.w,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [

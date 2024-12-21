@@ -19,9 +19,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
-    final screenHight = screenSize.height;
+    
 
     TextEditingController email_controller = TextEditingController();
     TextEditingController password_controller = TextEditingController();
@@ -43,15 +41,15 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
               children: [
                 Image.asset(
                   "assets/bussiness_screen_man.png",
-                  height: 1150.h,width: 450.w,
+                  height: 1150.h,width: 500.w,
                 ),
                 const SizedBox(
                   width: 15,
                 ),
                 Container(
-                   padding: EdgeInsets.only(top: 10.h, right: 90.w, left: 90.w),
+                   padding: EdgeInsets.only(top: 10.h, right: 110.w, left: 110.w),
                     
-                    width: 680.w,
+                    width: 630.w,
                   decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [
@@ -85,7 +83,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
-                        height: 30.h,
+                        height: 50.h,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -101,7 +99,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                                       controller: email_controller),
                                 ),
                                 SizedBox(
-                                  width: 15.h,
+                                  width: 20.w,
                                 ),
                                 Expanded(
                                   flex: 1,
@@ -112,13 +110,13 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                               ],
                             ),
                             SizedBox(
-                              height: 20.h,
+                              height: 22.h,
                             ),
                             CustomTextField(
                                 text: "Your Full Address Here",
                                 controller: password_controller),
                             SizedBox(
-                              height: 20.h,
+                              height: 22.h,
                             ),
                             Obx(() {
                               return Container(
@@ -175,13 +173,13 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                               );
                             }),
                             SizedBox(
-                              height: 20.h,
+                              height: 22.h,
                             ),
                             CustomTextField(
                                 text: "Postal Code",
                                 controller: confirm_password_controller),
                             SizedBox(
-                              height: 20.h,
+                              height: 22.h,
                             ),
                             Container(
                               height: 380.h,
@@ -195,11 +193,11 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 20.h,
+                        height: 25.h,
                       ),
                       CustomArrowButton(text: "Save info", ontap: () {}),
                        SizedBox(
-                        height: 40.h,
+                        height: 50.h,
                       )
                     ],
                   ),

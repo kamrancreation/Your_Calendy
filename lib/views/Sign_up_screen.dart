@@ -52,9 +52,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Image.asset("assets/sign_up_girl_img.png",height: 1300.h,width: 450.w,),
                   const SizedBox(width: 15,),
                   Container(
-                    padding: EdgeInsets.only(top: 10.h, right: 70.w, left: 70.w),
-                    height: 1500.h,
-                    width: 680.w,
+                    padding: EdgeInsets.only(top: 15.h, right: 110.w, left: 110.w),
+                    //height: 1500.h,
+                    width: 630.w,
                     decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
@@ -142,7 +142,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               CustomTextField(
                                   text: "***************",
-                                  controller: password_controller),
+                                  controller: password_controller,
+                                  suffixIcon: Icon(Icons.visibility_off),
+                                  ),
                                SizedBox(
                                 height: 10.h,
                               ),
@@ -159,7 +161,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               CustomTextField(
                                   text: "******************",
-                                  controller: confirm_password_controller),
+                                  controller: confirm_password_controller,
+                                  suffixIcon: Icon(Icons.visibility_off),
+                                  ),
                                SizedBox(
                                 height: 10.h,
                               ),
@@ -207,7 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         bgColor:const Color(0xffE8EBFF) ,
                         borderColor: const Color(0xffA9B5FE),),
                         
-                         SizedBox(height: 15.h,),
+                         SizedBox(height: 25.h,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

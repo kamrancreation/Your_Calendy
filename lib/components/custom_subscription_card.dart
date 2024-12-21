@@ -20,25 +20,34 @@ class CustomSubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                      padding: EdgeInsets.only(top: 50.h, right: 10.w, left: 10.w,bottom: 30.h),
-                      height: 800.h,
-                width:  350.w,
+                      padding: EdgeInsets.only(top: 60.h,bottom: 30.h),
+                      height: 1000.h,
+                width:  330.w,
                 decoration: BoxDecoration(
+                   boxShadow: [
+              BoxShadow(
+                color: Color(0xFF003366), 
+                spreadRadius: 0,
+                blurRadius: 10, 
+                offset: Offset(0, 5),
+              ),
+            ],
                     gradient: const LinearGradient(
                       colors: [
-                        Colors.white,
-                        Color(0xff003366),
+                        Color(0xFFFFFFFF),
+                        Color(0xFF003366),
                       ],
                       begin: Alignment.topCenter, // Start of the gradient
                       end: Alignment.bottomCenter, // End of the gradient
                     ),
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.r),
-                      topRight: Radius.circular(30.r)
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30)
                     ),
                     border: Border.all(
                       width: 1.w,
-                      color: Color(0xff6B9ACA)
+                      color: Color(0xff6B9ACA),
+                      
                     )
                     ),
                     child: Column(
@@ -47,12 +56,12 @@ class CustomSubscriptionCard extends StatelessWidget {
 
                         Text(title,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w800,
+                          fontSize: 23.sp,
+                          fontWeight: FontWeight.w600,
                           color: Color(0xff003366),
                         ),
                         textAlign: TextAlign.center,),
-                        SizedBox(height: 25.h,),
+                        SizedBox(height: 30.h,),
                         subtitle !=null? Text(subtitle!,
                         style: GoogleFonts.plusJakartaSans(
                           fontSize: 14.sp,
@@ -60,35 +69,39 @@ class CustomSubscriptionCard extends StatelessWidget {
                           color: Colors.white,
                         ),) : SizedBox(),
 
+                        SizedBox(height: 30.h,),
                         Text(price,
                         style: GoogleFonts.saira(
-                          fontSize: 30.sp,
+                          fontSize: 35.sp,
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         ),),
-
+                        SizedBox(height: 25.h,),
                         Text(text,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: 14.sp,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
                           color: Colors.white,
                         ),),
-                        SizedBox(height: 50.h,),
-                        Container(
-                          height: 60.h,
-                          width: 150.w,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30.r)
+                        SizedBox(height: 120.h,),
+                        Positioned(
+                          bottom: 0,
+                          child: Container(
+                            height: 85.h,
+                            width: 200.w,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(40.r)
+                            ),
+                            child: Center(
+                              child: Text(button_text,
+                          style: GoogleFonts.cherrySwash(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xff003366),
                           ),
-                          child: Center(
-                            child: Text(button_text,
-                        style: GoogleFonts.cherrySwash(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xff003366),
-                        ),
-                        textAlign: TextAlign.center,),
+                          textAlign: TextAlign.center,),
+                            ),
                           ),
                         ),
                       ],

@@ -22,22 +22,22 @@ class CardItem extends StatelessWidget {
     return Flexible(
       flex: 1,
       child: Container(
-                            height: 316,
-                            width: 359,
-                            padding: EdgeInsets.only(top: 7.h,left: 40.w,right: 40.w,bottom: 7.h),
+                            height: 330,
+                            width: 370,
+                            padding: EdgeInsets.only(top: 7,left: 30,right: 30,bottom: 7),
                             decoration: BoxDecoration(
                               border: Border.all(
-                                width: 1.w,
+                                width: 1,
                                 color: colorAll!,
                               ),
-                              borderRadius: BorderRadius.circular(20.r)
+                              borderRadius: BorderRadius.circular(20)
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.asset(imgUrl,height:90.h ,width:100.w,),
-                                SizedBox(height: 12.h,),
+                                Image.asset(imgUrl,height:88 ,width:95,),
+                                SizedBox(height: 10,),
                                 Text(title,
                                 style: GoogleFonts.plusJakartaSans(
                                   fontSize:20 ,
@@ -45,7 +45,7 @@ class CardItem extends StatelessWidget {
                                   color: colorAll,
                                 ),
                                 textAlign: TextAlign.center,),
-                                SizedBox(height: 17.h,),
+                                SizedBox(height: 10,),
                                 Text(discription,
                                   style: GoogleFonts.inter(
                                   fontSize: 15 ,

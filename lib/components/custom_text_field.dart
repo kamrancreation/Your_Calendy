@@ -8,6 +8,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
   final bool obscureText;
   final Icon? suffixIcon;
+  
   const CustomTextField({
   super.key,
   required this.text,

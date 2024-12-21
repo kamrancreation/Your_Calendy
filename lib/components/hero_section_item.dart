@@ -18,6 +18,7 @@ class HeroSectionItem extends StatelessWidget {
     final screenWidth = screenSize.width;
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
                                 height: 90.h,

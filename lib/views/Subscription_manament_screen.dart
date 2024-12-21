@@ -57,12 +57,12 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                     gradient: const LinearGradient(
                       colors: [
                         Colors.white,
-                        Color(0xFF003366),
+                        Color(0xff003366),
                       ],
                       begin: Alignment.topCenter, // Start of the gradient
                       end: Alignment.bottomCenter, // End of the gradient
                     ),
-                    borderRadius: BorderRadius.circular(20.r)),
+                    borderRadius: BorderRadius.circular(30.r)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -77,7 +77,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                           ),
                     ),
                         SizedBox(
-                          height: 5.h,
+                          height: 10.h,
                         ),
                         Center(
                           child: Text(
@@ -90,11 +90,11 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(height: 15.h,),
+                        SizedBox(height: 30.h,),
                     Stack(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 60.h),
+                          padding: EdgeInsets.only(top: 100.h),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -121,7 +121,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                         )
                       ],
                     ),
-                    SizedBox(height: 30.h,),
+                    SizedBox(height: 40.h,),
                     Row(
                       children: [
                         Expanded(
@@ -189,10 +189,10 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                         Expanded(
                           flex: 1,
                           child: Column(
-                            //mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              
+                              SizedBox(height: 300.h,),
                               Row(
                                 children: [
                                   Expanded(
@@ -244,6 +244,7 @@ class _SubscriptionManamentScreenState extends State<SubscriptionManamentScreen>
                                   ),
                                 ],
                               ),
+                              SizedBox(height: 5.h,),
                                Text(
                                 "Country",
                                 style: GoogleFonts.plusJakartaSans(

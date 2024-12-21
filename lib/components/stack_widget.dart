@@ -20,46 +20,46 @@ class StackWidget extends StatelessWidget {
       width: width,
       child : Stack(
                         children: [
-                         Transform(
-                           alignment: Alignment.center,
-                          transform: Matrix4.rotationZ(-3.1),
-                          child :Container(
-                              height: hight, // Height of the container
-                              width: width, // Width of the container
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(
-                                      50.r), // Rounded corners
-                                  color: Color(0xffFFFFFF)),
-                            ),
+                         Padding(
+                          padding: EdgeInsets.only(top: 16.h),
+                           child: Transform(
+                             alignment: Alignment.center,
+                            transform: Matrix4.rotationZ(-3.0),
+                            child :Container(
+                                height: hight, // Height of the container
+                                width: width, // Width of the container
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(
+                                        50.r), // Rounded corners
+                                    color: Color(0xffFFFFFF)),
+                              ),
+                           ),
                          ),
                           
-                          Positioned(
-                            top: 0,
-                            child: Container(
-                              height: hight, 
-                              width: width, 
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.circular(50.r), 
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color(0xFFAEB6E8), 
-                                    Color(0xFF003366), 
-                                  ],
-                                  begin:
-                                      Alignment.topLeft,
-                                  end: Alignment
-                                      .bottomRight, 
-                                ),
+                          Container(
+                            height: hight, 
+                            width: width, 
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(50.r), 
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color(0xFFAEB6E8), 
+                                  Color(0xFF003366), 
+                                ],
+                                begin:
+                                    Alignment.topLeft,
+                                end: Alignment
+                                    .bottomRight, 
                               ),
-                              child: Center(
-                                child: Text(
-                                  text,
-                                  style: GoogleFonts.saira(
-                                    fontSize: 25.sp,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xffFFFFFF),
-                                  ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                text,
+                                style: GoogleFonts.saira(
+                                  fontSize: 24.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xffFFFFFF),
                                 ),
                               ),
                             ),

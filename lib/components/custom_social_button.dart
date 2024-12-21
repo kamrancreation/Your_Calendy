@@ -23,11 +23,11 @@ class CustomSocialButton extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-                        padding: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w, bottom: 10.w),
+                        padding: EdgeInsets.only( left: 10.w, right: 10.w, ),
                         height: 120.h,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(13.r),
+                          borderRadius: BorderRadius.circular(20.r),
                           color: bgColor,
                           border: Border.all(
                             width: 5.w,
@@ -35,9 +35,10 @@ class CustomSocialButton extends StatelessWidget {
                           )
                         ),
                         child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(width: 20.w,),
-                            Image.asset(imgIcon),
+                            SizedBox(width: 40.w,),
+                            Image.asset(imgIcon, height: 60.h,),
                             Expanded(
                               child: Text(text,
                               style: GoogleFonts.plusJakartaSans(
