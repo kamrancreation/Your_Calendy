@@ -42,15 +42,16 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
               children: [
                 Image.asset(
                   "assets/business_hours.png",
-                  height: 600,
+                 height: 1100.h,
+                 width: 450.w,
                 ),
-                const SizedBox(
-                  width: 15,
+               SizedBox(
+                  width: 15.h,
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 70, left: 70),
-                  //height: 700,
-                  width: screenWidth / 2,
+                  padding: EdgeInsets.only(top: 10.h, right: 90.w, left: 90.w),
+                   //height: 1500.h,
+                    width: 680.w,
                   decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [
@@ -66,7 +67,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                       Text(
                         "Business Hours",
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600 ? 30 : 18,
+                          fontSize: 35.sp,
                           fontWeight: FontWeight.w600,
                           color: const Color(0xff003366),
                         ),
@@ -77,7 +78,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                       Text(
                         "Configure the standard hours of operation",
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600.0 ? 25 : 15,
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xff003366),
                         ),
@@ -406,7 +407,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                   Text(
                                     "Open From",
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 8.sp,
+                                      fontSize: 15.sp,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xff003366),
                                     ),
@@ -415,53 +416,53 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                     height: 15.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
-                                      text: "-----------",
+                                      text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                   SizedBox(
+                                    height: 10.h,
                                   ),
                                 ],
                               ),
@@ -477,7 +478,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                   Text(
                                     "Close Till",
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 8.sp,
+                                      fontSize: 15.sp,
                                       fontWeight: FontWeight.w600,
                                       color: const Color(0xff003366),
                                     ),
@@ -489,50 +490,50 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
-                                  const SizedBox(
-                                    height: 10,
+                                  SizedBox(
+                                    height: 10.h,
                                   ),
                                 ],
                               ),
@@ -540,20 +541,20 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: 20.h,
                       ),
                       CustomArrowButton(text: "Save info", ontap: () {}),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: 20.h,
                       )
                     ],
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 40,
+            SizedBox(
+              height: 40.h,
             ),
             CustomFooter()
           ],

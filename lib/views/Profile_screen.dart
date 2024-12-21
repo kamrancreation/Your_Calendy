@@ -43,12 +43,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/profile_screen_boy_img.png",height: 500,),
+                Image.asset("assets/profile_screen_boy_img.png",height: 1000.h,),
                 SizedBox(width: 15,),
                 Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 30, left: 70),
-                  //height: 700,
-                  width: screenWidth /2,
+                  padding: EdgeInsets.only(top: 10.h, right: 30.w, left: 70.w),
+                  width: 600.w,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
@@ -64,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                             "Company Profile",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600 ? 30 : 18,
+                              fontSize: 35.sp,
                               fontWeight: FontWeight.w600,
                               color: Color(0xff003366),
                             ),
@@ -75,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Text(
                             "Define Your Business with YouCalendy",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600.0 ? 25 : 15,
+                              fontSize: 15.sp,
                               fontWeight: FontWeight.w400,
                               color: Color(0xff003366),
                             ),
@@ -92,30 +91,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     text: "Enter Buisness Name",
                                     controller: business_controller),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 30.h,
                                 ),
                                 
                                 CustomTextField(
                                     text: "Personal Name Here",
                                     controller: name_controller),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 30.h,
                                 ),
                                 
                                 CustomTextField(
                                     text: "Your Sur Name Here",
                                     controller: sur_name_controller),
                                SizedBox(
-                                  height: 20.h,
+                                  height: 30.h,
                                 ),
                                 CustomTextField(
                                     text: "Enter Number Here",
                                     controller: number_controller),
                                SizedBox(
-                                  height: 20.h,
+                                  height: 30.h,
                                 ),
                                 Container(
-                                      height: 130,
+                                      height: 250.h,
                                       decoration: BoxDecoration(
                                       color: Colors.white, 
                                       borderRadius: BorderRadius.circular(10.r),
@@ -128,7 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             hintText: "Describe Your Business",
                                             hintStyle: GoogleFonts.dmSans(
                                               color: Colors.grey,
-                                              fontSize: 15,
+                                              fontSize: 15.sp,
                                               fontWeight: FontWeight.w400,
                                               ),
                                             border: InputBorder.none, 
@@ -148,11 +147,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               children: [
                                 Obx((){
                                   return Container(
-                                            width: 150,
-                                            height: 150,
+                                            width: 130.w,
+                                            height: 260.h,
                                             decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: BorderRadius.circular(10)
+                                            borderRadius: BorderRadius.circular(10.r)
                                             ),
 
                                             child: controller.selectedImage.value == null
@@ -160,7 +159,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: Text(
                                 "Drag and drop image for profile",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 18, color: Colors.black54),
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 16.sp,
+                                  color: Color(0xff003366)),
                               ),
                             )
                                                       : Image.network(
@@ -169,30 +170,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                                           );
                                 }),
-                                SizedBox(height: 13),
+                                SizedBox(height: 20.h),
 
                                 InkWell(
                                   onTap: (){
                                   controller.pickImage;  
                                   },
                                   child: Container(
-                                    height: 30,
-                                    width: 150,
+                                    height: 70.h,
+                                    width: 130.w,
                                     decoration: BoxDecoration(
                                       color: Color(0xffD9D9D9),
-                                      borderRadius: BorderRadius.circular(7)
+                                      borderRadius: BorderRadius.circular(7.r)
                                     ),
                                     child: Center(child: Text("Upload File")),
                                   ),
                                 ),
-                                SizedBox(height: 15),
+                                SizedBox(height: 23.h),
                                 Obx((){
                                   return Container(
-                                            width: 150,
-                                            height: 150,
+                                            width: 130.w,
+                                            height: 260.h,
                                             decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: BorderRadius.circular(10)
+                                            borderRadius: BorderRadius.circular(10.r)
                                             ),
 
                                             child: controller.selectedImage.value == null
@@ -209,18 +210,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                                           );
                                 }),
-                                SizedBox(height: 13),
+                                SizedBox(height: 20.h),
 
                                 InkWell(
                                   onTap: (){
                                   controller.pickImage1;  
                                   },
                                   child: Container(
-                                    height: 30,
-                                    width: 150,
+                                    height: 70.h,
+                                    width: 130.w,
                                     decoration: BoxDecoration(
                                       color: Color(0xffD9D9D9),
-                                      borderRadius: BorderRadius.circular(7)
+                                      borderRadius: BorderRadius.circular(7.r)
                                     ),
                                     child: Center(child: Text("Upload File")),
                                   ),
@@ -230,9 +231,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 20.h),
-                      CustomArrowButton(ontap: (){}, text : "Save info"),
-                      SizedBox(height: 20.h)
+                      SizedBox(height: 35.h),
+                      CustomArrowButton(ontap: (){
+                        
+                      }, text : "Save info"),
+                      SizedBox(height: 35.h)
                     ],
                   ),
                 ),

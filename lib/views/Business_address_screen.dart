@@ -43,15 +43,15 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
               children: [
                 Image.asset(
                   "assets/bussiness_screen_man.png",
-                  height: 660.h,
+                  height: 1150.h,width: 450.w,
                 ),
                 const SizedBox(
                   width: 15,
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 30.w, left: 30.w),
-                  //height: 700,
-                  width: screenWidth / 2,
+                   padding: EdgeInsets.only(top: 10.h, right: 90.w, left: 90.w),
+                    
+                    width: 680.w,
                   decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [
@@ -67,7 +67,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                       Text(
                         "Business Address",
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600 ? 30 : 18,
+                          fontSize: 35.sp,
                           fontWeight: FontWeight.w600,
                           color: const Color(0xff003366),
                         ),
@@ -78,14 +78,14 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                       Text(
                         "Enter Your Business Details Carefully",
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600.0 ? 25 : 15,
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.w400,
                           color: const Color(0xff003366),
                         ),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
-                        height: 15.h,
+                        height: 30.h,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -101,7 +101,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                                       controller: email_controller),
                                 ),
                                 SizedBox(
-                                  width: 5.h,
+                                  width: 15.h,
                                 ),
                                 Expanded(
                                   flex: 1,
@@ -112,17 +112,17 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                               ],
                             ),
                             SizedBox(
-                              height: 15.h,
+                              height: 20.h,
                             ),
                             CustomTextField(
                                 text: "Your Full Address Here",
                                 controller: password_controller),
                             SizedBox(
-                              height: 15.h,
+                              height: 20.h,
                             ),
                             Obx(() {
                               return Container(
-                                height: 40.h,
+                                height: 100.h,
                                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
@@ -149,7 +149,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                                     'Select City',
                                     style: GoogleFonts.dmSans(
                                       color: Colors.grey,
-                                      fontSize: 15,
+                                      fontSize: 15.sp,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
@@ -165,7 +165,7 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                                         city,
                                         style: GoogleFonts.dmSans(
                                           color: Colors.black,
-                                          fontSize: 15,
+                                          fontSize: 15.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
@@ -175,16 +175,16 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                               );
                             }),
                             SizedBox(
-                              height: 15.h,
+                              height: 20.h,
                             ),
                             CustomTextField(
                                 text: "Postal Code",
                                 controller: confirm_password_controller),
                             SizedBox(
-                              height: 15.h,
+                              height: 20.h,
                             ),
                             Container(
-                              height: 250.h,
+                              height: 380.h,
                               width: double.infinity,
                               child: Image.asset(
                                 "assets/google_map.png",
@@ -194,20 +194,20 @@ class _BusinessAddressScreenState extends State<BusinessAddressScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: 20.h,
                       ),
                       CustomArrowButton(text: "Save info", ontap: () {}),
-                      const SizedBox(
-                        height: 20,
+                       SizedBox(
+                        height: 40.h,
                       )
                     ],
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 30,
+             SizedBox(
+              height: 40.h,
             ),
             const CustomFooter(),
           ],

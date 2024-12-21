@@ -21,9 +21,6 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
   @override
   Widget build(BuildContext context) {
 
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
-
     TextEditingController service_controller = TextEditingController();
     TextEditingController price_controller = TextEditingController();
     TextEditingController discription_controller = TextEditingController();
@@ -41,10 +38,10 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                 height: 30.h,
               ),
               Container(
-                margin: EdgeInsets.only(top: 30.h, right: 70.w, left: 70.w),
-                padding: EdgeInsets.only(top: 10.h, right: 50.w, left: 50.w),
-                //height: 700,
-                width:  double.infinity,
+                margin: EdgeInsets.only(top: 30.h, right: 80.w, left: 80.w),
+                padding: EdgeInsets.only(top: 20.h, right: 100.w, left: 100.w),
+                height: 500.w,
+                width:  1200.w,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
@@ -60,7 +57,7 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                     Text(
                           "Service Managment",
                           style: GoogleFonts.plusJakartaSans(
-                            fontSize: screenWidth >= 600 ? 30 : 18,
+                            fontSize: 35.sp,
                             fontWeight: FontWeight.w600,
                             color: const Color(0xff003366),
                           ),
@@ -71,13 +68,13 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                         Text(
                           "Streamline Your Operations, Simplify Your Life",
                           style: GoogleFonts.plusJakartaSans(
-                            fontSize: screenWidth >= 600.0 ? 25 : 15,
+                            fontSize: 16.sp,
                             fontWeight: FontWeight.w400,
                             color: const Color(0xff003366),
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 10.h,),
+                        SizedBox(height: 25.h,),
                     Row(
                       children: [
                         Expanded(
@@ -93,7 +90,7 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                                         controller: service_controller),
                                   ),
                                   SizedBox(
-                                    width: 10.h,
+                                    width: 20.h,
                                   ),
                                   Expanded(
                                     flex: 1,
@@ -105,7 +102,7 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                               ),
                               SizedBox(height: 20.h,),
                               Container(
-                                    height: 130,
+                                    height: 200.h,
                                     decoration: BoxDecoration(
                                     color: Colors.white, 
                                     borderRadius: BorderRadius.circular(10.r),
@@ -115,10 +112,10 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                                         controller: discription_controller,
                                         maxLines: 10,
                                         decoration: InputDecoration(
-                                          hintText: "Describe Your Business",
+                                          hintText: "Enter Detail About Service",
                                           hintStyle: GoogleFonts.dmSans(
                                             color: Colors.grey,
-                                            fontSize: 15,
+                                            fontSize: 15.sp,
                                             fontWeight: FontWeight.w400,
                                             ),
                                           border: InputBorder.none, 
@@ -132,27 +129,30 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                         ),
                        
                         Expanded(
-                          flex: 1,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Obx((){
                                 return Container(
-                                          width: 150,
-                                          height: 150,
+                                          width: 130.w,
+                                          height: 250.h,
                                           decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(10)
+                                          borderRadius: BorderRadius.circular(10.r)
                                           ),
               
                                           child: controller.selectedImage1.value == null
-                                                    ? const Center(
+                                                    ?  Center(
                             child: Text(
                               "Drag and drop image for service",
+                              style: GoogleFonts.plusJakartaSans(
+                                fontSize: 12.sp,
+                                 color: Color(0xff003366)),
                               textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 18, color: Colors.black54),
+
                             ),
+                            
                           )
                                                     : Image.network(
                             controller.selectedImage1.value!.path,
@@ -160,32 +160,33 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                           ),
                                         );
                               }),
-                              const SizedBox(height: 13),
+                             SizedBox(height: 15.h),
               
                               InkWell(
                                 onTap: (){
                                 controller.pickImage1;  
                                 },
                                 child: Container(
-                                  height: 30,
-                                  width: 150,
+                                  height: 70.h,
+                                  width: 130.w,
                                   decoration: BoxDecoration(
                                     color: const Color(0xffD9D9D9),
-                                    borderRadius: BorderRadius.circular(7)
+                                    borderRadius: BorderRadius.circular(7.r)
                                   ),
                                   child: const Center(child: Text("Upload File")),
                                 ),
                               ),
                             ],
                           ),
-                        )
+                        ),
+                        SizedBox(width: 40.w,)
                       ],
                     ),
-                    SizedBox(height: 25.h),
+                    SizedBox(height: 30.h),
                     CustomArrowButton(ontap: (){}, text : "Save info"),
                     SizedBox(height: 25.h),
                     SizedBox(
-                      height: 300.h,
+                      height: 350.h,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Table(

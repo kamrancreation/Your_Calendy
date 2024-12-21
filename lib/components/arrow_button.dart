@@ -3,6 +3,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomArrowButton extends StatelessWidget {
@@ -17,24 +18,24 @@ class CustomArrowButton extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-                        height: 50,
+                        height: 120.h,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Color(0xff003366),
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10.r)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               text,
                               style: GoogleFonts.plusJakartaSans(
-                                fontSize: 22,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white,
                               ),
                             ),
                             //SizedBox(width: 3.w,),
-                            Image.asset("assets/arrow.png",height: 30)
+                            Image.asset("assets/arrow.png",height: 50.h)
                           ],
                         ),
                       ),

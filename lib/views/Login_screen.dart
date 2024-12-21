@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 padding: EdgeInsets.only(top: 10.h, right: 70, left: 70),
                 //height: 700,
-                width: 702,
+                width: 600.w,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "Sign In",
                       style: GoogleFonts.plusJakartaSans(
-                        fontSize: screenWidth >= 600 ? 30 : 18,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.w600,
                         color: const Color(0xff003366),
                       ),
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       "Please Sign In with your Account",
                       style: GoogleFonts.plusJakartaSans(
-                        fontSize: screenWidth >= 600.0 ? 25 : 15,
+                        fontSize: 15.sp,
                         fontWeight: FontWeight.w400,
                         color: const Color(0xff003366),
                       ),
@@ -90,36 +90,36 @@ class _LoginScreenState extends State<LoginScreen> {
                           Text(
                             "Email",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600.0 ? 15 : 17,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w700,
                               color: Colors.white,
                             ),
                           ),
-                          const SizedBox(
-                            height: 5,
+                           SizedBox(
+                            height: 5.h,
                           ),
                           CustomTextField(
                               text: "Enter your email",
                               controller: email_controller),
-                          const SizedBox(
-                            height: 10,
+                         SizedBox(
+                            height: 10.h,
                           ),
                           Text(
                             "Password",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: screenWidth >= 600.0 ? 15 : 17,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w700,
                               color: Colors.white,
                             ),
                           ),
-                          const SizedBox(
-                            height: 5,
+                           SizedBox(
+                            height: 5.h,
                           ),
                           CustomTextField(
                               text: "Enter your password",
                               controller: password_controller),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: 10.h,
                           ),
                         ],
                       ),
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             "Forget Password?",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: 16,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w700,
                               color: const Color(0xffFBBC05),
                             ),
@@ -140,8 +140,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                     SizedBox(
+                      height: 14.sp,
                     ),
                     Obx(() => controller.isLoadingSignIn.value
                 ? Center(child: CircularProgressIndicator()) // Show loader
@@ -151,45 +151,45 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller.signInWithEmailAndPassword(email, password);
                     }), 
                   ),
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: 30.h,
                     ),
                     const DividerRow(text: "Or Sign In With"),
                     
-                    const SizedBox(height: 15,),
+                     SizedBox(height: 15.h,),
                     CustomSocialButton(text: "Sign In With Facebook", ontap: (){
 
                     }, imgIcon: "assets/facebook_icon.png"),
-                    const SizedBox(height: 15,),
+                     SizedBox(height: 15.h,),
                   CustomSocialButton(text: "Sign In With Google", ontap: (){
                       authController.login();
                     }, imgIcon: "assets/google_icon.png",
                     bgColor:const Color(0xffE8EBFF) ,
                     borderColor: const Color(0xffA9B5FE),),
                     
-                    const SizedBox(height: 15,),
+                    SizedBox(height: 15.h,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Didn’t have an account?",
                         style: GoogleFonts.plusJakartaSans(
-                              fontSize: 16,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w400,
                               color: const Color(0xffFFFFFF),
                             ),
                         ),
-                        const SizedBox(width: 10,),
+                        SizedBox(width: 10.w,),
                         Text(
                             "Sign up Here",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: 16,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w700,
                               color: const Color(0xffFBBC05),
                             ),
                           ),
                       ],
                     ),
-                    const SizedBox(height: 20,)
+                    SizedBox(height: 20.h,)
                   ],
                 ),
               ),

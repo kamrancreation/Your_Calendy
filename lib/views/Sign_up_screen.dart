@@ -39,220 +39,208 @@ class _SignUpScreenState extends State<SignUpScreen> {
       backgroundColor: Colors.grey.shade100,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 30.h,
-            ),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("assets/sign_up_girl_img.png",height: 600,),
-                const SizedBox(width: 15,),
-                Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 70, left: 70),
-                  //height: 700,
-                  width: screenWidth /2,
-                  decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [
-                          Colors.white,
-                          Color(0xFF003366),
-                        ],
-                        begin: Alignment.topCenter, // Start of the gradient
-                        end: Alignment.bottomCenter, // End of the gradient
-                      ),
-                      borderRadius: BorderRadius.circular(20.r)),
-                  child: Column(
-                    children: [
-                      Text(
-                        "Sign Up",
-                        style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600 ? 30 : 18,
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xff003366),
+        child: Padding(
+          padding: EdgeInsets.only(top: 20.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 30.h,
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset("assets/sign_up_girl_img.png",height: 1300.h,width: 450.w,),
+                  const SizedBox(width: 15,),
+                  Container(
+                    padding: EdgeInsets.only(top: 10.h, right: 70.w, left: 70.w),
+                    height: 1500.h,
+                    width: 680.w,
+                    decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Colors.white,
+                            Color(0xFF003366),
+                          ],
+                          begin: Alignment.topCenter, // Start of the gradient
+                          end: Alignment.bottomCenter, // End of the gradient
                         ),
-                      ),
-                      SizedBox(
-                        height: 5.h,
-                      ),
-                      Text(
-                        "Create an account to begin your Journey With Us!",
-                        style: GoogleFonts.plusJakartaSans(
-                          fontSize: screenWidth >= 600.0 ? 25 : 15,
-                          fontWeight: FontWeight.w400,
-                          color: const Color(0xff003366),
+                        borderRadius: BorderRadius.circular(20.r)),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Sign Up",
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 35.sp,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xff003366),
+                          ),
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        SizedBox(
+                          height: 5.h,
+                        ),
+                        Text(
+                          "Create an account to begin your Journey With Us!",
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w400,
+                            color: const Color(0xff003366),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Full Name",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                               SizedBox(
+                                height: 5.h,
+                              ),
+                              CustomTextField(
+                                  text: "Enter Full Name",
+                                  controller: name_controller),
+                               SizedBox(
+                                height: 10.h,
+                              ),
+                              Text(
+                                "Email",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                               SizedBox(
+                                height: 5.h,
+                              ),
+                              CustomTextField(
+                                  text: "Enter your email",
+                                  controller: email_controller),
+                               SizedBox(
+                                height: 10.h,
+                              ),
+                              Text(
+                                "Password",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                             SizedBox(
+                                height: 5.h,
+                              ),
+                              CustomTextField(
+                                  text: "***************",
+                                  controller: password_controller),
+                               SizedBox(
+                                height: 10.h,
+                              ),
+                              Text(
+                                "Confirm Password",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                               SizedBox(
+                                height: 5.h,
+                              ),
+                              CustomTextField(
+                                  text: "******************",
+                                  controller: confirm_password_controller),
+                               SizedBox(
+                                height: 10.h,
+                              ),
+                            ],
+                          ),
+                        ),
+                        
+                         SizedBox(
+                          height: 30.h,
+                        ),
+                        Obx(() {
+                return signupController.isLoading.value
+                    ? CircularProgressIndicator()
+                    : 
+                    CustomButton(text: "SIGN UP", ontap: (){
+                   String name = name_controller.text.trim();
+                          String email = email_controller.text.trim();
+                          String password = password_controller.text.trim();
+          
+                          if (name.isNotEmpty &&
+                              email.isNotEmpty &&
+                              password.isNotEmpty) {
+                            signupController.signUp(name, email, password);
+                          } else {
+                            Get.snackbar('Error', 'All fields are required',
+                                snackPosition: SnackPosition.BOTTOM);
+                          }
+                        });
+                    
+              }),
+                        
+                         SizedBox(
+                          height: 30.h,
+                        ),
+                        const DividerRow(text: "Or Sign Up With"),
+                        
+                       SizedBox(height: 20.h,),
+                        CustomSocialButton(text: "Sign Up With Facebook", ontap: (){
+                  
+                        }, imgIcon: "assets/facebook_icon.png"),
+                         SizedBox(height: 20.h,),
+                        CustomSocialButton(text: "Sign Up With Google", ontap: (){
+                            authController.login();
+                        }, imgIcon: "assets/google_icon.png",
+                        bgColor:const Color(0xffE8EBFF) ,
+                        borderColor: const Color(0xffA9B5FE),),
+                        
+                         SizedBox(height: 15.h,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Text("Already have an account?",
+                            style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: const Color(0xffFFFFFF),
+                                ),
+                            ),
+                             SizedBox(width: 10.w,),
                             Text(
-                              "Full Name",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: screenWidth >= 600.0 ? 15 : 17,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
+                                "Sign In Here",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: const Color(0xffFBBC05),
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            CustomTextField(
-                                text: "Enter Full Name",
-                                controller: name_controller),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Email",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: screenWidth >= 600.0 ? 15 : 17,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            CustomTextField(
-                                text: "Enter your email",
-                                controller: email_controller),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Password",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: screenWidth >= 600.0 ? 15 : 17,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            CustomTextField(
-                                text: "***************",
-                                controller: password_controller),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Confirm Password",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: screenWidth >= 600.0 ? 15 : 17,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            CustomTextField(
-                                text: "******************",
-                                controller: confirm_password_controller),
-                            const SizedBox(
-                              height: 10,
-                            ),
                           ],
                         ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: Text(
-                              "Forget Password?",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xffFBBC05),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Obx(() {
-              return signupController.isLoading.value
-                  ? CircularProgressIndicator()
-                  : 
-                  CustomButton(text: "SIGN UP", ontap: (){
-                 String name = name_controller.text.trim();
-                        String email = email_controller.text.trim();
-                        String password = password_controller.text.trim();
-
-                        if (name.isNotEmpty &&
-                            email.isNotEmpty &&
-                            password.isNotEmpty) {
-                          signupController.signUp(name, email, password);
-                        } else {
-                          Get.snackbar('Error', 'All fields are required',
-                              snackPosition: SnackPosition.BOTTOM);
-                        }
-                      });
-                  
-            }),
-                      
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      const DividerRow(text: "Or Sign Up With"),
-                      
-                      const SizedBox(height: 15,),
-                      CustomSocialButton(text: "Sign Up With Facebook", ontap: (){
-                
-                      }, imgIcon: "assets/facebook_icon.png"),
-                      const SizedBox(height: 15,),
-                      CustomSocialButton(text: "Sign Up With Google", ontap: (){
-                          authController.login();
-                      }, imgIcon: "assets/google_icon.png",
-                      bgColor:const Color(0xffE8EBFF) ,
-                      borderColor: const Color(0xffA9B5FE),),
-                      
-                      const SizedBox(height: 15,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Already have an account?",
-                          style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: const Color(0xffFFFFFF),
-                              ),
-                          ),
-                          const SizedBox(width: 10,),
-                          Text(
-                              "Sign In Here",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xffFBBC05),
-                              ),
-                            ),
-                        ],
-                      ),
-                      const SizedBox(height: 20,)
-                    ],
+                        SizedBox(height: 20.h,)
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 40,),
-            // ignore: prefer_const_constructors
-            CustomFooter()
-
-          ],
+                ],
+              ),
+              const SizedBox(height: 40,),
+              // ignore: prefer_const_constructors
+              CustomFooter()
+          
+            ],
+          ),
         ),
       ),
     );

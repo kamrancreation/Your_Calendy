@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
@@ -15,7 +16,7 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-                        height: 60,
+                        height: 120.h,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Color(0xff003366),
