@@ -49,10 +49,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/sign_up_girl_img.png",height: 1300.h,width: 450.w,),
+                  Image.asset("assets/sign_up_girl_img.png",height: screenHight,width: screenWidth/2.5,),
                   const SizedBox(width: 15,),
                   Container(
-                    padding: EdgeInsets.only(top: 15.h, right: 110.w, left: 110.w),
+                    padding: EdgeInsets.only(top: 20.h, right: 110.w, left: 110.w),
                     //height: 1500.h,
                     width: 630.w,
                     decoration: BoxDecoration(
@@ -76,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ),
                         SizedBox(
-                          height: 5.h,
+                          height: 10.h,
                         ),
                         Text(
                           "Create an account to begin your Journey With Us!",
@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
-                          height: 10.h,
+                          height: 25.h,
                         ),
                         Container(
                           width: double.infinity,
@@ -110,7 +110,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   text: "Enter Full Name",
                                   controller: name_controller),
                                SizedBox(
-                                height: 10.h,
+                                height: 15.h,
                               ),
                               Text(
                                 "Email",
@@ -127,7 +127,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   text: "Enter your email",
                                   controller: email_controller),
                                SizedBox(
-                                height: 10.h,
+                                height: 15.h,
                               ),
                               Text(
                                 "Password",
@@ -146,7 +146,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   suffixIcon: Icon(Icons.visibility_off),
                                   ),
                                SizedBox(
-                                height: 10.h,
+                                height: 15.h,
                               ),
                               Text(
                                 "Confirm Password",
@@ -165,14 +165,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   suffixIcon: Icon(Icons.visibility_off),
                                   ),
                                SizedBox(
-                                height: 10.h,
+                                height: 15.h,
                               ),
                             ],
                           ),
                         ),
                         
                          SizedBox(
-                          height: 30.h,
+                          height: 35.h,
                         ),
                         Obx(() {
                 return signupController.isLoading.value
@@ -196,7 +196,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               }),
                         
                          SizedBox(
-                          height: 30.h,
+                          height: 35.h,
                         ),
                         const DividerRow(text: "Or Sign Up With"),
                         
@@ -204,14 +204,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         CustomSocialButton(text: "Sign Up With Facebook", ontap: (){
                   
                         }, imgIcon: "assets/facebook_icon.png"),
-                         SizedBox(height: 20.h,),
+                         SizedBox(height: 22.h,),
                         CustomSocialButton(text: "Sign Up With Google", ontap: (){
                             authController.login();
                         }, imgIcon: "assets/google_icon.png",
                         bgColor:const Color(0xffE8EBFF) ,
                         borderColor: const Color(0xffA9B5FE),),
                         
-                         SizedBox(height: 25.h,),
+                         SizedBox(height: 30.h,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -233,7 +233,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                           ],
                         ),
-                        SizedBox(height: 20.h,)
+                        SizedBox(height: 50.h,)
                       ],
                     ),
                   ),

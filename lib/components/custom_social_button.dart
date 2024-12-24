@@ -24,7 +24,7 @@ class CustomSocialButton extends StatelessWidget {
       onTap: ontap,
       child: Container(
                         padding: EdgeInsets.only( left: 10.w, right: 10.w, ),
-                        height: 120.h,
+                        height: 110.h,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20.r),

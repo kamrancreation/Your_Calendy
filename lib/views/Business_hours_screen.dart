@@ -49,7 +49,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                   width: 15.h,
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 90.w, left: 90.w),
+                  padding: EdgeInsets.only(top: 20.h, right: 90.w, left: 90.w),
                    //height: 1500.h,
                     width: 680.w,
                   decoration: BoxDecoration(
@@ -73,7 +73,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 5.h,
+                        height: 15.h,
                       ),
                       Text(
                         "Configure the standard hours of operation",
@@ -85,7 +85,7 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
-                        height: 10.h,
+                        height: 40.h,
                       ),
                       Container(
                         width: double.infinity,
@@ -105,7 +105,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Monday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         SizedBox(width: 15.w,),
                                         Obx((){
@@ -149,7 +150,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Tuesday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -192,7 +194,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Wednesday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -235,7 +238,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Thursday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -278,7 +282,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Friday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -321,7 +326,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Tuesday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -364,7 +370,8 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                           "Sunday",
                                           style: TextStyle(
                                               fontSize: 16,
-                                              fontWeight: FontWeight.w500),
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.white),
                                         ),
                                         // Switch
                                         Obx((){
@@ -420,49 +427,49 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                    SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                 ],
                               ),
@@ -491,49 +498,49 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                   CustomTextField(
                                       text: "-----------",
                                       suffixIcon: const Icon(CupertinoIcons.clock),
                                       controller: name_controller),
                                   SizedBox(
-                                    height: 10.h,
+                                    height: 14.h,
                                   ),
                                 ],
                               ),
@@ -542,11 +549,11 @@ class _BusinessHoursScreenState extends State<BusinessHoursScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 20.h,
+                        height: 50.h,
                       ),
                       CustomArrowButton(text: "Save info", ontap: () {}),
                       SizedBox(
-                        height: 20.h,
+                        height: 70.h,
                       )
                     ],
                   ),

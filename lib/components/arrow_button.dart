@@ -35,7 +35,7 @@ class CustomArrowButton extends StatelessWidget {
                               ),
                             ),
                             //SizedBox(width: 3.w,),
-                            Image.asset("assets/arrow.png",height: 50.h)
+                            Image.asset("assets/arrow.png",height: 100.h)
                           ],
                         ),
                       ),

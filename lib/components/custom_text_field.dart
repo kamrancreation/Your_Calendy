@@ -22,30 +22,35 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final screenSize = MediaQuery.of(context).size;
     return Container(
-                                  height: 40.sp,
-                                  decoration: BoxDecoration(
-                                  color: Colors.white, 
-                                  borderRadius: BorderRadius.circular(10.r),
-                                    ),
-                                  child: Center(
-                                    child: TextFormField(
-                                      controller: controller,
-                                      obscureText: obscureText,
-                                      decoration: InputDecoration(
-                                        suffixIcon: suffixIcon,
-                                        hintText: text,
-                                        hintStyle: GoogleFonts.dmSans(
-                                          color: Colors.grey,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w400,
-                                          ),
-                                        border: InputBorder.none, 
-                                        contentPadding: EdgeInsets.symmetric(horizontal: 20.h),
-                                      ),
-                                    ),
-                                  ),
-                                );
+      height: 80.h,
+      
+      child: TextFormField(
+        controller: controller,
+        obscureText: obscureText,
+        decoration: InputDecoration(
+      suffixIcon: suffixIcon,
+      hintText: text,
+      hintStyle: GoogleFonts.dmSans(
+        color: Colors.grey,
+        fontSize: 13.sp,
+        fontWeight: FontWeight.w400,
+      ),
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: BorderSide.none,
+      ),
+      contentPadding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 0.h),
+        ),
+        style: GoogleFonts.dmSans(
+      color: Colors.black,
+      fontSize: 13.sp,
+        ),
+        cursorColor: Colors.grey,
+      ),
+    );
+
   }
 }

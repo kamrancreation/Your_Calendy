@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:your_calendy/components/card_item.dart';
+import 'package:your_calendy/components/deshboard_desktop_view.dart';
 import 'package:your_calendy/components/deshboard_footer_column.dart';
+import 'package:your_calendy/components/deshboard_max_tab_view.dart';
+import 'package:your_calendy/components/deshboard_mobile_view.dart';
 import 'package:your_calendy/components/hero_section_item.dart';
 import 'package:your_calendy/components/shadow_item.dart';
 import 'package:your_calendy/components/stack_widget.dart';
@@ -23,6 +26,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
 
     return SafeArea(
       child: Scaffold(
@@ -31,241 +35,13 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              Container(
-                // height: 1900.h,
-                // width: double.infinity,
-                child: Stack(children: [
-                  // Positioned(
-                  //     right: 0,
-                  //     child: Image.asset(
-                  //       'assets/background_image.png',
-                  //       fit: BoxFit.fitHeight,
-                  //     )
-                  //     ),
-                  Container(
-                    height: 1900.h,
-                width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-              image: AssetImage('assets/background_image.png'), // Path to your image
-              fit: BoxFit.cover, 
-            ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                         padding:  EdgeInsets.only(top: 50.h, left: 40.w, right: 30.w),    
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                  text: 'Welcome to ',
-                                  style: GoogleFonts.saira(
-                                    fontSize: 53.sp,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white,
-                                  )),
-                              TextSpan(
-                                text: 'YouCalendy',
-                                style: TextStyle(
-                                  fontSize: 53.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: const Color(0xffB4C9DE),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Text(
-                          "The Ultimate Convenience for Busy People",
-                          style: GoogleFonts.acme(
-                              fontSize: 30.sp,
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xffEFF0F6)),
-                        ),
-                        SizedBox(
-                          height: 35.h,
-                        ),
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                  text:
-                                      'Organize your barbershop efficiently and professionally \nwith YouCalendy. Forget about out-of-hours calls and \nconfusion in appointment management.\n',
-                                  style: GoogleFonts.plusJakartaSans(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                  )),
-                              TextSpan(
-                                text: 'Sign up for free',
-                                style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 20.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: const Color(0xffFAE635),
-                                  decoration: TextDecoration.underline,
-                                ),
-                              ),
-                              TextSpan(
-                                  text:
-                                      ' today and discover how YouCalendy can \ntransform your barbershop',
-                                  style: GoogleFonts.plusJakartaSans(
-                                    fontSize: 20.sp,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                  )),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 60.h,
-                        ),
-                        StackWidget(
-                                    text: 'Advantages',
-                                    hight: 85.h,
-                                    width: 167.w,
-                                  ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 8.w),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    
-                                    SizedBox(
-                                      height: 25.h,
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      child: const HeroSectionItem(
-                                          imgPath: "assets/hero_section2.png",
-                                          text: "Appointment History"),
-                                    ),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section2.png",
-                                        text: "Improved Time Management"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section3.png",
-                                        text: "Professionalism"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section4.png",
-                                        text: "Time Savings"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section5.png",
-                                        text: "Increased Trust"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section6.png",
-                                        text: "Increased Revenue"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section7.png",
-                                        text: "Improved Communication"),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    const HeroSectionItem(
-                                        imgPath: "assets/hero_section8.png",
-                                        text: "Flexibility and Control"),
-                                    // Align(
-                                    //   alignment: Alignment.bottomRight,
-                                    //   child: StackWidget()),
-                                  ],
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    SizedBox(
-                                      height: 250.h,
-                                    ),
-                                    Transform(
-                                      alignment: Alignment.center,
-                                      transform: Matrix4.rotationZ(-0.1),
-                                      child: Text(
-                                        "YOUR TIME",
-                                        style: GoogleFonts.aclonica(
-                                            fontSize: 20.sp,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.white),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 110.w,
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    SizedBox(
-                                      height: 600.h,
-                                    ),
-                                    Transform(
-                                      alignment: Alignment.center,
-                                      transform: Matrix4.rotationZ(0.1),
-                                      child: Text(
-                                        "YOUR CONTROL",
-                                        style: GoogleFonts.aclonica(
-                                            fontSize: 20.sp,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.white),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 200.h,
-                                    ),
-                                    StackWidget(
-                                      text: "Sign-up For Free",
-                                      hight: 90.h,
-                                      width: 200.w,
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ]),
-              ),
+              if(screenWidth >1280)
+              DeshboardDesktopView()
+              else if(screenWidth ==1280)
+              DeshboardMaxTabView()
+              else 
+              DeshboardMinTabView()
+                  ,
               Container(
                 //  height: 1100.h,
                 width: double.maxFinite,
@@ -279,18 +55,18 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 15.h,
+                      height: 20.h,
                     ),
                     Text(
                       "Advantages & Benefits",
                       style: GoogleFonts.inriaSans(
-                        fontSize: 40.sp,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.w700,
                         color: Colors.white,
                       ),
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Text(
                       "Do you receive annoying calls outside of your working hours?",
@@ -341,7 +117,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ],
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 70.h,
                     ),
                     StackWidget(
                       text: "Sign-up For Free",
@@ -349,7 +125,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       width: 200.w,
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                   ],
                 ),
@@ -371,10 +147,13 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 20.h,
+                    ),
                     Text(
                       "Let’s Help Your Client’s",
                       style: GoogleFonts.inter(
-                        fontSize: 40.sp,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.w700,
                         color: Colors.white,
                       ),
@@ -391,7 +170,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ),
                     ),
                     SizedBox(
-                      height: 20.h,
+                      height: 35.h,
                     ),
                     const Wrap(
                       spacing: 25,
@@ -429,7 +208,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ],
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                     StackWidget(
                       text: "Sign-up For Free",
@@ -437,7 +216,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       width: 200.w,
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                   ],
                 ),
@@ -472,7 +251,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 35.h,
                     ),
                     const Wrap(
                       spacing: 25,
@@ -513,7 +292,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ],
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                     StackWidget(
                       text: "Sign-up For Free",
@@ -521,7 +300,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       width: 200.w,
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     )
                   ],
                 ),
@@ -548,7 +327,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                     Text(
                       "Benefits of Mass SMS with YouCalendy:",
                       style: GoogleFonts.plusJakartaSans(
-                        fontSize: 40.sp,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xff003366),
                       ),
@@ -567,7 +346,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 40.h,
                     ),
                     const Wrap(
                       spacing: 25,
@@ -608,7 +387,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ],
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                     StackWidget(
                       text: "Sign-up For Free",
@@ -616,7 +395,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       width: 200.w,
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     )
                   ],
                 ),
@@ -731,7 +510,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       ],
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 80.h,
                     ),
                     StackWidget(
                       text: "Sign-up For Free",
@@ -739,7 +518,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       width: 200.w,
                     ),
                     SizedBox(
-                      height: 50.h,
+                      height: 90.h,
                     ),
                   ],
                 ),
@@ -750,6 +529,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                   children: [
                     const Divider(),
                     Container(
+                      padding: EdgeInsets.only(left: 50.w, right: 50.w),
                       color: Color(0xff003366),
                       height: 250.h,
                       width: double.maxFinite,
@@ -757,12 +537,9 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            width: 50.w,
-                          ),
                           Image.asset(
                             "assets/logo.png",
-                            height: 50.h,
+                            height: 60.h,
                             width: 120.w,
                           ),
                           SizedBox(
@@ -772,7 +549,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                             child: Text(
                               "Organize your barbershop efficiently and professionally with YouCalendy. Forget about out-of-hours calls and confusion in appointment management.",
                               style: GoogleFonts.plusJakartaSans(
-                                  fontSize: screenWidth >= 600 ? 20 : 14,
+                                  fontSize: 18.sp,
                                   fontWeight: FontWeight.w400,
                                   color: const Color(0xffE8EBFF)),
                             ),
@@ -787,8 +564,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                     Container(
                       color: Colors.transparent,
                       padding:
-                          EdgeInsets.only(top: 20.h, left: 40.w, right: 40.w),
-                      //height: 400.h,
+                          EdgeInsets.only(top: 110.h, left: 50.w, right: 50.w,bottom: 30.h),
                       width: double.maxFinite,
                       child: Column(
                         children: [
@@ -847,100 +623,99 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                                 width: 15.w,
                               ),
                               Expanded(
-                                flex: 1,
-                                child: Container(
-                                  color: Colors.transparent,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Subscribe to our newsletter",
-                                        style: GoogleFonts.dmSans(
-                                          fontSize: 15.sp,
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white,
-                                        ),
+                                flex: 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Subscribe to our newsletter",
+                                      style: GoogleFonts.dmSans(
+                                        fontSize: 15.sp,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
                                       ),
-                                      SizedBox(
-                                        height: 20.h,
+                                    ),
+                                    SizedBox(
+                                      height: 35.h,
+                                    ),
+                                    Text(
+                                      "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma",
+                                      style: GoogleFonts.dmSans(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
                                       ),
-                                      Text(
-                                        "Subscribe to our newsletter",
-                                        style: GoogleFonts.dmSans(
-                                          fontSize: 12.sp,
+                                    ),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        hintText: 'Enter your email',
+                                        hintStyle: GoogleFonts.dmSans(
+                                          color: Color(0xff003366),
+                                          fontSize: 14.sp,
                                           fontWeight: FontWeight.w400,
-                                          color: Colors.white,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 20.h,
-                                      ),
-                                      Container(
-                                        height: 70.h,
-                                        width: 300.w,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
+                                        filled: true,
+                                        fillColor: Colors.white,
+                                        border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(50.r),
+                                          borderSide: BorderSide.none,
                                         ),
-                                        child: Center(
-                                          child: TextFormField(
-                                            decoration: InputDecoration(
-                                              hintText: 'Enter your email',
-                                              hintStyle: GoogleFonts.dmSans(
-                                                color: Color(0xff003366),
-                                                fontSize: 14.sp,
-                                                fontWeight: FontWeight.w400,
-                                              ),
-                                              border: InputBorder.none,
-                                              contentPadding: EdgeInsets.only(
-                                                  bottom: 10.h, left: 10.w),
-                                            ),
+                                        contentPadding: EdgeInsets.symmetric(
+                                          horizontal: 20.w,
+                                          vertical: 20.h,
+                                        ),
+                                      ),
+                                      style: GoogleFonts.dmSans(
+                                        color: Colors.black,
+                                        fontSize: 14.sp,
+                                      ),
+                                      cursorColor: Color(0xff003366),
+                                    ),
+                                    SizedBox(
+                                      height: 30.h,
+                                    ),
+                                    Container(
+                                      height: 74.h,
+                                      width: 100.w,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xffE8EBFF),
+                                        borderRadius:
+                                            BorderRadius.circular(50.r),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          "Subscribe",
+                                          style: GoogleFonts.dmSans(
+                                            color: const Color(0xFF003366),
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w500,
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 30.h,
-                                      ),
-                                      Container(
-                                        height: 54.h,
-                                        width: 100.w,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xffE8EBFF),
-                                          borderRadius:
-                                              BorderRadius.circular(50.r),
-                                        ),
-                                        child: Center(
-                                          child: Text(
-                                            "Subscribe",
-                                            style: GoogleFonts.dmSans(
-                                              color: const Color(0xFF003366),
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
+                                    )
+                                  ],
                                 ),
                               )
                             ],
                           ),
                           SizedBox(
-                            height: 30.h,
+                            height: 110.h,
                           ),
                           const Divider(),
                           SizedBox(
-                            height: 20.h,
+                            height: 30.h,
                           ),
                           Row(
                             children: [
                               Text(
                                 "Copyright © 2024 YouCalendy | All Rights Reserved ",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 12.sp,
+                                  fontSize: 13.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white,
                                 ),
@@ -948,43 +723,43 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                               const Spacer(),
                               Image.asset(
                                 "assets/facebook.png",
-                                height: 20.h,
+                                height: 30.h,
                                 width: 13.w,
                               ),
                               SizedBox(
-                                width: 2.w,
+                                width: 5.w,
                               ),
                               Image.asset(
                                 "assets/twitter.png",
-                                height: 20.h,
+                                height: 30.h,
                                 width: 13.w,
                               ),
                               SizedBox(
-                                width: 2.w,
+                                width: 5.w,
                               ),
                               Image.asset(
                                 "assets/insta.png",
-                                height: 20.h,
+                                height: 30.h,
                                 width: 13.w,
                               ),
                               SizedBox(
-                                width: 2.w,
+                                width: 5.w,
                               ),
                               Image.asset(
                                 "assets/linkedin.png",
-                                height: 20.h,
+                                height: 30.h,
                                 width: 13.w,
                               ),
                               SizedBox(
-                                width: 2.w,
+                                width: 5.w,
                               ),
                               Image.asset(
                                 "assets/youtube.png",
-                                height: 20.h,
+                                height: 30.h,
                                 width: 13.w,
                               ),
                               SizedBox(
-                                width: 2.w,
+                                width: 5.w,
                               ),
                             ],
                           ),

@@ -52,279 +52,283 @@ class _ServiceManagmentScreenState extends State<ServiceManagmentScreen> {
                       end: Alignment.bottomCenter, // End of the gradient
                     ),
                     borderRadius: BorderRadius.circular(20.r)),
-                child: Column(
-                  children: [
-                    Text(
-                          "Service Managment",
-                          style: GoogleFonts.plusJakartaSans(
-                            fontSize: 35.sp,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0xff003366),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    children: [
+                      Text(
+                            "Service Managment",
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 35.sp,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xff003366),
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 5.h,
-                        ),
-                        Text(
-                          "Streamline Your Operations, Simplify Your Life",
-                          style: GoogleFonts.plusJakartaSans(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xff003366),
+                          SizedBox(
+                            height: 5.h,
                           ),
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(height: 25.h,),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Column(
-                            children: [
-                                Row(
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: CustomTextField(
-                                        text: "Enter service Name",
-                                        controller: service_controller),
-                                  ),
-                                  SizedBox(
-                                    width: 20.h,
-                                  ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: CustomTextField(
-                                        text: "Enter Price",
-                                        controller: price_controller),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 20.h,),
-                              Container(
-                                    height: 200.h,
-                                    decoration: BoxDecoration(
-                                    color: Colors.white, 
-                                    borderRadius: BorderRadius.circular(10.r),
-                                      ),
-                                    child: Center(
-                                      child: TextFormField(
-                                        controller: discription_controller,
-                                        maxLines: 10,
-                                        decoration: InputDecoration(
-                                          hintText: "Enter Detail About Service",
-                                          hintStyle: GoogleFonts.dmSans(
-                                            color: Colors.grey,
-                                            fontSize: 15.sp,
-                                            fontWeight: FontWeight.w400,
-                                            ),
-                                          border: InputBorder.none, 
-                                          contentPadding: EdgeInsets.symmetric(horizontal: 20.h ,vertical: 20.h),
+                          Text(
+                            "Streamline Your Operations, Simplify Your Life",
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xff003366),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 25.h,),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              children: [
+                                  Row(
+                                  children: [
+                                    Expanded(
+                                      flex: 1,
+                                      child: CustomTextField(
+                                          text: "Enter service Name",
+                                          controller: service_controller),
+                                    ),
+                                    SizedBox(
+                                      width: 40.h,
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: CustomTextField(
+                                          text: "Enter Price",
+                                          controller: price_controller),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 40.h,),
+                                Container(
+                                      height: 200.h,
+                                      decoration: BoxDecoration(
+                                      color: Colors.white, 
+                                      borderRadius: BorderRadius.circular(10.r),
+                                        ),
+                                      child: Center(
+                                        child: TextFormField(
+                                          controller: discription_controller,
+                                          maxLines: 10,
+                                          decoration: InputDecoration(
+                                            hintText: "Enter Detail About Service",
+                                            hintStyle: GoogleFonts.dmSans(
+                                              color: Colors.grey,
+                                              fontSize: 15.sp,
+                                              fontWeight: FontWeight.w400,
+                                              ),
+                                            border: InputBorder.none, 
+                                            contentPadding: EdgeInsets.symmetric(horizontal: 20.h ,vertical: 20.h),
+                                          ),
                                         ),
                                       ),
+                                    ),                  
+                              ],
+                            ),
+                          ),
+                         
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Obx((){
+                                  return Container(
+                                           padding: EdgeInsets.all(5),
+                                            width: 130.w,
+                                            height: 250.h,
+                                            decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(10.r)
+                                            ),
+                                
+                                            child: controller.selectedImage1.value == null
+                                                      ?  Center(
+                              child: Text(
+                                "Drag and drop image for service",
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 12.sp,
+                                   color: Color(0xff003366)),
+                                textAlign: TextAlign.center,
+                  
+                              ),
+                              
+                            )
+                                                      : Image.network(
+                              controller.selectedImage1.value!.path,
+                              fit: BoxFit.cover,
+                            ),
+                                          );
+                                }),
+                               SizedBox(height: 15.h),
+                                
+                                InkWell(
+                                  onTap: (){
+                                  controller.pickImage1;  
+                                  },
+                                  child: Container(
+                                    height: 70.h,
+                                    width: 130.w,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xffD9D9D9),
+                                      borderRadius: BorderRadius.circular(7.r),
+                                       border: Border.all(
+                                                color: Colors.black,
+                                                width: 1.w
+                                              )
                                     ),
-                                  ),                  
-                            ],
-                          ),
-                        ),
-                       
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Obx((){
-                                return Container(
-                                          width: 130.w,
-                                          height: 250.h,
-                                          decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.circular(10.r)
-                                          ),
-              
-                                          child: controller.selectedImage1.value == null
-                                                    ?  Center(
-                            child: Text(
-                              "Drag and drop image for service",
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 12.sp,
-                                 color: Color(0xff003366)),
-                              textAlign: TextAlign.center,
-
-                            ),
-                            
-                          )
-                                                    : Image.network(
-                            controller.selectedImage1.value!.path,
-                            fit: BoxFit.cover,
-                          ),
-                                        );
-                              }),
-                             SizedBox(height: 15.h),
-              
-                              InkWell(
-                                onTap: (){
-                                controller.pickImage1;  
-                                },
-                                child: Container(
-                                  height: 70.h,
-                                  width: 130.w,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xffD9D9D9),
-                                    borderRadius: BorderRadius.circular(7.r)
+                                    child: const Center(child: Text("Upload File")),
                                   ),
-                                  child: const Center(child: Text("Upload File")),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 40.w,)
-                      ],
-                    ),
-                    SizedBox(height: 30.h),
-                    CustomArrowButton(ontap: (){}, text : "Save info"),
-                    SizedBox(height: 25.h),
-                    SizedBox(
-                      height: 350.h,
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Table(
-                          border: TableBorder.all(color: Color(0xffB9B9B9)),
-                          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                          children: [
-                            TableRow(
-                              decoration: BoxDecoration(
-                                color: Color(0xff003366),
-                        
-                              ),
-                              children: [
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Service Name",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Price",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Description",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Actions",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                ))
-                              ]
+                              ],
                             ),
-                            ...List.generate(20,
-                            (index) => TableRow(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              children: [
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Service ${index+1}",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff003366)
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("\$100",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff003366)
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                                TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text("Service Description ${index+1}",
-                                  style:  GoogleFonts.inter(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff003366)
-                                  ),
-                                  textAlign: TextAlign.center,), 
-                                )),
-                        
-                              TableCell(
-                                  verticalAlignment: TableCellVerticalAlignment.middle,
-                                  child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text("Update",
-                                      style:  GoogleFonts.inter(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color(0xff32AA45)
-                                      ),
-                                      textAlign: TextAlign.center,),
-                                      Text("Remove",
-                                      style:  GoogleFonts.inter(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w700,
-                                        color: Color(0xffEA4335)
-                                      ),
-                                      textAlign: TextAlign.center,),
-                                    ],
-                                  ), 
-                                ))
-                        
-                              ]
-                            ))
-                          ],
-                        ),
+                          ),
+                          SizedBox(width: 40.w,)
+                        ],
                       ),
-                    ),
-                    SizedBox(height: 40.h,),
-                  ],
+                      SizedBox(height: 50.h),
+                      CustomArrowButton(ontap: (){
+
+                      }, text : "Add new Service"),
+                      SizedBox(height: 50.h),
+                      Table(
+                        border: TableBorder.all(color: Color(0xffB9B9B9)),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: [
+                          TableRow(
+                            decoration: BoxDecoration(
+                              color: Color(0xff003366),
+                      
+                            ),
+                            children: [
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Service Name",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Price",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Description",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Actions",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white
+                                ),
+                                textAlign: TextAlign.center,), 
+                              ))
+                            ]
+                          ),
+                          ...List.generate(20,
+                          (index) => TableRow(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                            ),
+                            children: [
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Service ${index+1}",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff003366)
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("\$100",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff003366)
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                              TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Service Description ${index+1}",
+                                style:  GoogleFonts.inter(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff003366)
+                                ),
+                                textAlign: TextAlign.center,), 
+                              )),
+                      
+                            TableCell(
+                                verticalAlignment: TableCellVerticalAlignment.middle,
+                                child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("Update",
+                                    style:  GoogleFonts.inter(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xff32AA45)
+                                    ),
+                                    textAlign: TextAlign.center,),
+                                    Text("Remove",
+                                    style:  GoogleFonts.inter(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xffEA4335)
+                                    ),
+                                    textAlign: TextAlign.center,),
+                                  ],
+                                ), 
+                              ))
+                      
+                            ]
+                          ))
+                        ],
+                      ),
+                      SizedBox(height: 40.h,),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: 20.h,),

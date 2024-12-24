@@ -33,7 +33,7 @@ class HeroSectionItem extends StatelessWidget {
                               ),
                               Text(text,
                               style: GoogleFonts.sansita(
-                                fontSize: 15.sp,
+                                fontSize: 17.sp,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white
                               ),),

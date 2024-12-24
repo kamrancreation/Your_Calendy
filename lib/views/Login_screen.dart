@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(
               child: Container(
-                padding: EdgeInsets.only(top: 10.h, right: 100.w, left: 100.w),
+                padding: EdgeInsets.only(top: 20.h, right: 100.w, left: 100.w,bottom: 40.h),
                 //height: 700,
                 width: 550.w,
                 decoration: BoxDecoration(
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 5.h,
+                      height: 10.h,
                     ),
                     Text(
                       "Please Sign In with your Account",
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: 10.h,
+                      height: 30.h,
                     ),
                     Container(
                       width: double.infinity,
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               text: "Enter your email",
                               controller: email_controller),
                          SizedBox(
-                            height: 10.h,
+                            height: 20.h,
                           ),
                           Text(
                             "Password",
@@ -119,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               text: "Enter your password",
                               controller: password_controller),
                           SizedBox(
-                            height: 10.h,
+                            height: 30.h,
                           ),
                         ],
                       ),
@@ -141,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                      SizedBox(
-                      height: 14.sp,
+                      height: 20.sp,
                     ),
                     Obx(() => controller.isLoadingSignIn.value
                 ? Center(child: CircularProgressIndicator()) // Show loader
@@ -160,14 +160,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     CustomSocialButton(text: "Sign In With Facebook", ontap: (){
 
                     }, imgIcon: "assets/facebook_icon.png"),
-                     SizedBox(height: 15.h,),
+                     SizedBox(height: 22.h,),
                   CustomSocialButton(text: "Sign In With Google", ontap: (){
                       authController.login();
                     }, imgIcon: "assets/google_icon.png",
                     bgColor:const Color(0xffE8EBFF) ,
                     borderColor: const Color(0xffA9B5FE),),
                     
-                    SizedBox(height: 15.h,),
+                    SizedBox(height: 25.h,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

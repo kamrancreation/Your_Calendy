@@ -8,12 +8,25 @@ class CustomSubscriptionCard extends StatelessWidget {
   final String title;
   final String? subtitle;
   final String price;
-  final String text;
+  final String? text1;
+  final String? text2;
+  final String? text3;
+  final String? text4;
+  final String? text5;
+  final String? text6;
+  final String? text7;
   final String button_text;
+
   const CustomSubscriptionCard({super.key,
   required this.title,
   required this.price,
-  required this.text,
+   this.text1,
+   this.text2,
+   this.text3,
+   this.text4,
+   this.text5,
+   this.text6,
+   this.text7,
   required this.button_text,
   this.subtitle});
 
@@ -51,7 +64,6 @@ class CustomSubscriptionCard extends StatelessWidget {
                     )
                     ),
                     child: Column(
-                      
                       children: [
 
                         Text(title,
@@ -77,13 +89,63 @@ class CustomSubscriptionCard extends StatelessWidget {
                           color: Colors.white,
                         ),),
                         SizedBox(height: 25.h,),
-                        Text(text,
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                             text1 != null?  Text(text1!,
                         style: GoogleFonts.plusJakartaSans(
                           fontSize: 16.sp,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                           color: Colors.white,
-                        ),),
-                        SizedBox(height: 120.h,),
+                        ),): SizedBox(),
+                        SizedBox(height: 13.h,),
+                        text2 != null?  Text(text2!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                        SizedBox(height: 13.h,),
+                        text3 != null?  Text(text3!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                        SizedBox(height: 13.h,),
+                        text4 != null?  Text(text4!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                        SizedBox(height: 13.h,),
+                        text5 != null?  Text(text5!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                        SizedBox(height: 13.h,),
+                        text6 != null?  Text(text6!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                        SizedBox(height: 10.h,),
+                        text7 != null?  Text(text7!,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),): SizedBox(),
+                          ],
+                        ),
+                      ),
+                       // SizedBox(height: 120.h,),
+                       Spacer(),
                         Positioned(
                           bottom: 0,
                           child: Container(
@@ -104,6 +166,7 @@ class CustomSubscriptionCard extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(height: 20.h,)
                       ],
                     ),
                     );

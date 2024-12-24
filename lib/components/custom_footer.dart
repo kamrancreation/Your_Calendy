@@ -16,10 +16,11 @@ class _CustomFooterState extends State<CustomFooter> {
   Widget build(BuildContext context) {
     return Container(
               padding: EdgeInsets.only(
-                top: 20.h,
-                left: 20.w,
+                top: 30.h,
+                left: 30.w,
+                right: 70.w
               ),
-              height: 400.h,
+              height: 430.h,
               width: double.infinity,
               color: const Color(0xff003366),
               child: Row(
@@ -35,7 +36,7 @@ class _CustomFooterState extends State<CustomFooter> {
                       ],
                     ),
                   ),
-                  SizedBox(width : 70.w),
+                  SizedBox(width : 90.w),
                   Expanded(
                     child: const DeshboardFooterColumn(
                             title: "Follow Us on",
@@ -55,8 +56,9 @@ class _CustomFooterState extends State<CustomFooter> {
                             text4: "Appointment", 
                             ),
                   ),
-                  SizedBox(width : 70.w),
+                  SizedBox(width : 20.w),
                     Expanded(
+                      flex: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,18 +69,18 @@ class _CustomFooterState extends State<CustomFooter> {
                             fontWeight: FontWeight.w700,
                             color: Colors.white,
                           ),),
-                          SizedBox(height: 35.h,),
+                          SizedBox(height: 40.h,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                       Image.asset("assets/instagram_icon.png",height: 63.h,),
-                       SizedBox(width: 3.w,),
-                       Image.asset("assets/facebook_icon2.png",height: 63.h,),
-                       SizedBox(width: 3.w,),
-                       Image.asset("assets/linkedin_icon.png",height: 63.h,),
-                       SizedBox(width: 3.w,),
-                       Image.asset("assets/twitter_icon.png",height: 63.h,),
+                       Image.asset("assets/instagram_icon.png",height: 65.h,),
+                       SizedBox(width: 15.w,),
+                       Image.asset("assets/facebook_icon2.png",height: 65.h,),
+                       SizedBox(width: 15.w,),
+                       Image.asset("assets/linkedin_icon.png",height: 65.h,),
+                       SizedBox(width: 15.w,),
+                       Image.asset("assets/twitter_icon.png",height: 65.h,),
                       
                             ],
                           )

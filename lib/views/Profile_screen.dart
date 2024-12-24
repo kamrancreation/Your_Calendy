@@ -44,10 +44,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset("assets/profile_screen_boy_img.png",height: 1000.h,),
-                SizedBox(width: 15,),
+                SizedBox(width: 50.w,),
                 Container(
-                  padding: EdgeInsets.only(top: 10.h, right: 30.w, left: 70.w),
-                  width: 600.w,
+                  padding: EdgeInsets.only(top: 30.h, right: 30.w, left: 70.w),
+                  width: 550.w,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
@@ -63,13 +63,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Text(
                             "Company Profile",
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: 35.sp,
+                              fontSize: 30.sp,
                               fontWeight: FontWeight.w600,
                               color: Color(0xff003366),
                             ),
                           ),
                           SizedBox(
-                            height: 5.h,
+                            height: 10.h,
                           ),
                           Text(
                             "Define Your Business with YouCalendy",
@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(height: 10.h,),
+                          SizedBox(height: 50.h,),
                       Row(
                         children: [
                           Expanded(
@@ -91,27 +91,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     text: "Enter Buisness Name",
                                     controller: business_controller),
                                 SizedBox(
-                                  height: 30.h,
+                                  height: 35.h,
                                 ),
                                 
                                 CustomTextField(
                                     text: "Personal Name Here",
                                     controller: name_controller),
                                 SizedBox(
-                                  height: 30.h,
+                                  height: 35.h,
                                 ),
                                 
                                 CustomTextField(
                                     text: "Your Sur Name Here",
                                     controller: sur_name_controller),
                                SizedBox(
-                                  height: 30.h,
+                                  height: 35.h,
                                 ),
                                 CustomTextField(
                                     text: "Enter Number Here",
                                     controller: number_controller),
                                SizedBox(
-                                  height: 30.h,
+                                  height: 35.h,
                                 ),
                                 Container(
                                       height: 250.h,
@@ -147,11 +147,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               children: [
                                 Obx((){
                                   return Container(
+                                    padding: EdgeInsets.all(5),
                                             width: 130.w,
                                             height: 260.h,
                                             decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: BorderRadius.circular(10.r)
+                                            borderRadius: BorderRadius.circular(10.r),
+                                           
                                             ),
 
                                             child: controller.selectedImage.value == null
@@ -161,7 +163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.plusJakartaSans(
                                   fontSize: 16.sp,
-                                  color: Color(0xff003366)),
+                                  color: Color(0xff003366)), 
                               ),
                             )
                                                       : Image.network(
@@ -181,7 +183,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     width: 130.w,
                                     decoration: BoxDecoration(
                                       color: Color(0xffD9D9D9),
-                                      borderRadius: BorderRadius.circular(7.r)
+                                      borderRadius: BorderRadius.circular(7.r),
+                                       border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.w
+                                            )
                                     ),
                                     child: Center(child: Text("Upload File")),
                                   ),
@@ -189,6 +195,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 SizedBox(height: 23.h),
                                 Obx((){
                                   return Container(
+                                    padding: EdgeInsets.all(5),
                                             width: 130.w,
                                             height: 260.h,
                                             decoration: BoxDecoration(
@@ -201,7 +208,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: Text(
                                 "Drag and drop profile icon",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 18, color: Colors.black54),
+                                style: GoogleFonts.plusJakartaSans(
+                                  fontSize: 16.sp,
+                                  color: Color(0xff003366)),
                               ),
                             )
                                                       : Image.network(
@@ -221,7 +230,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     width: 130.w,
                                     decoration: BoxDecoration(
                                       color: Color(0xffD9D9D9),
-                                      borderRadius: BorderRadius.circular(7.r)
+                                      borderRadius: BorderRadius.circular(7.r),
+                                       border: Border.all(
+                                              color: Colors.black,
+                                              width: 1.w
+                                            )
                                     ),
                                     child: Center(child: Text("Upload File")),
                                   ),
@@ -231,11 +244,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           )
                         ],
                       ),
-                      SizedBox(height: 35.h),
+                      SizedBox(height: 40.h),
                       CustomArrowButton(ontap: (){
                         
                       }, text : "Save info"),
-                      SizedBox(height: 35.h)
+                      SizedBox(height: 80.h)
                     ],
                   ),
                 ),
