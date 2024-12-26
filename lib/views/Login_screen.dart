@@ -8,6 +8,7 @@ import 'package:your_calendy/components/custom_social_button.dart';
 import 'package:your_calendy/components/custom_text_field.dart';
 import 'package:your_calendy/components/deshboard_footer_column.dart';
 import 'package:your_calendy/components/divider_row.dart';
+import 'package:your_calendy/components/stack_widget.dart';
 import 'package:your_calendy/controllers/auth_controller.dart';
 import 'package:your_calendy/controllers/sign_up_controller.dart';
 
@@ -39,6 +40,67 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+             Container(
+                height: 110.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xff003366),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.white
+                  )
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 20.w,),
+                    Text("YouCalendy",
+                    style: GoogleFonts.aladin(
+                      fontSize: 32.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    Image.asset("assets/hero_img.png",height: 60.h,),
+                    Spacer(),
+                    Text("Home",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Advantages",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Features",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Login",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                    Center(
+                      child: StackWidget(
+                        text: "Sign-up for Free",
+                        hight: 70.h,
+                        width: 170.w,
+                      ),
+                    ),
+                    SizedBox(width: 20.w,)
+                  ]
+                )
+              ),
             SizedBox(
               height: 30.h,
             ),

@@ -24,7 +24,7 @@ class StackWidget extends StatelessWidget {
                           padding: EdgeInsets.only(top: 16.h),
                            child: Transform(
                              alignment: Alignment.center,
-                            transform: Matrix4.rotationZ(-3.0),
+                            transform: Matrix4.rotationZ(-3.1),
                             child :Container(
                                 height: hight, // Height of the container
                                 width: width, // Width of the container
@@ -61,7 +61,9 @@ class StackWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xffFFFFFF),
                                 ),
+                                textAlign: TextAlign.center,
                               ),
+
                             ),
                           ),
                         ],

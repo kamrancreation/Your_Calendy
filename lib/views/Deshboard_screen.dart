@@ -8,6 +8,7 @@ import 'package:your_calendy/components/deshboard_footer_column.dart';
 import 'package:your_calendy/components/deshboard_max_tab_view.dart';
 import 'package:your_calendy/components/deshboard_mobile_view.dart';
 import 'package:your_calendy/components/hero_section_item.dart';
+import 'package:your_calendy/components/menu_stack_widget.dart';
 import 'package:your_calendy/components/shadow_item.dart';
 import 'package:your_calendy/components/stack_widget.dart';
 import 'package:your_calendy/controllers/DashboardController.dart';
@@ -35,6 +36,67 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
+              Container(
+                height: 110.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.white
+                  )
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 20.w,),
+                    Text("YouCalendy",
+                    style: GoogleFonts.aladin(
+                      fontSize: 32.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    Image.asset("assets/hero_img.png",height: 60.h,),
+                    Spacer(),
+                    Text("Home",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Advantages",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Features",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                     Text("Login",
+                    style: GoogleFonts.alike(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white
+                    ),),
+                    SizedBox(width: 40.w,),
+                    Center(
+                      child: MenuStackWidget(
+                        text: "Sign-up for Free",
+                        hight: 70.h,
+                        width: 180.w,
+                      ),
+                    ),
+                    SizedBox(width: 20.w,)
+                  ]
+                )
+              ),
               if(screenWidth >1280)
               DeshboardDesktopView()
               else if(screenWidth ==1280)
