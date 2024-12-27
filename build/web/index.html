@@ -15,10 +15,11 @@
     the `--base-href` argument provided to `flutter build`.
   -->
   <base href="/">
-
+  <meta name="google-signin-client_id" content="432874950285-k78p0nm2c974gutkqrm1i38ppei4le6g.apps.googleusercontent.com">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="432874950285-7r62hesdh8gimmj0tj6rjtq8577mmvtm.apps.googleusercontent.com.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,6 +32,31 @@
 
   <title>your_calendy</title>
   <link rel="manifest" href="manifest.json">
+  
+  <script type="module">
+    
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD4219X5jeCIcRX-n7MQcR7SCQbssxh47k",
+  authDomain: "you-calendy.firebaseapp.com",
+  projectId: "you-calendy",
+  storageBucket: "you-calendy.firebasestorage.app",
+  messagingSenderId: "432874950285",
+  appId: "1:432874950285:web:43dea3593d84e8a3f55cc4",
+  measurementId: "G-35EX6SR86P"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
