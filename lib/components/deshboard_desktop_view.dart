@@ -10,8 +10,13 @@ class DeshboardDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+     final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHight = screenSize.height;
+
     return Container(
-                height: 1900.h,
+                height: screenHight,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -27,7 +32,7 @@ class DeshboardDesktopView extends StatelessWidget {
                   children: [
                     Container(
                       padding: EdgeInsets.only(
-                          top: 40.h, left: 30.w, right: 90.w),
+                          top: 10.h, left: 30.w, right: 90.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -35,16 +40,16 @@ class DeshboardDesktopView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                    text: 'Welcome desktop ',
+                                    text: 'Welcome to ',
                                     style: GoogleFonts.saira(
-                                      fontSize: 40.sp,
+                                      fontSize: 34.sp,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     )),
                                 TextSpan(
                                   text: 'YouCalendy',
                                   style: TextStyle(
-                                    fontSize: 40.sp,
+                                    fontSize: 34.sp,
                                     fontWeight: FontWeight.w700,
                                     color: const Color(0xffB4C9DE),
                                   ),
@@ -55,12 +60,12 @@ class DeshboardDesktopView extends StatelessWidget {
                           Text(
                             "The Ultimate Convenience for Busy People",
                             style: GoogleFonts.acme(
-                                fontSize: 30.sp,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xffEFF0F6)),
                           ),
                           SizedBox(
-                            height: 35.h,
+                            height: 15.h,
                           ),
                           RichText(
                             text: TextSpan(
@@ -69,14 +74,14 @@ class DeshboardDesktopView extends StatelessWidget {
                                     text:
                                         'Organize your barbershop efficiently and professionally \nwith YouCalendy. Forget about out-of-hours calls and \nconfusion in appointment management.\n',
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 20.sp,
+                                      fontSize: 13.sp,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.white,
                                     )),
                                 TextSpan(
                                   text: 'Sign up for free',
                                   style: GoogleFonts.plusJakartaSans(
-                                    fontSize: 20.sp,
+                                    fontSize: 13.sp,
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xffFAE635),
                                     decoration: TextDecoration.underline,
@@ -86,7 +91,7 @@ class DeshboardDesktopView extends StatelessWidget {
                                     text:
                                         ' today and discover how YouCalendy can \ntransform your barbershop',
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 20.sp,
+                                      fontSize: 13.sp,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.white,
                                     )),
@@ -94,7 +99,7 @@ class DeshboardDesktopView extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 60.h,
+                            height: 20.h,
                           ),
                           StackWidget(
                             text: 'Advantages',
@@ -114,9 +119,9 @@ class DeshboardDesktopView extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: 25.h,
-                                ),
+                                // SizedBox(
+                                //   height: 25.h,
+                                // ),
                                 Positioned(
                                   left: 0,
                                   child: const HeroSectionItem(
@@ -124,43 +129,43 @@ class DeshboardDesktopView extends StatelessWidget {
                                       text: "Appointment History"),
                                 ),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section2.png",
                                     text: "Improved Time Management"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section3.png",
                                     text: "Professionalism"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section4.png",
                                     text: "Time Savings"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section5.png",
                                     text: "Increased Trust"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section6.png",
                                     text: "Increased Revenue"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section7.png",
                                     text: "Improved Communication"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 10.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section8.png",
@@ -178,7 +183,7 @@ class DeshboardDesktopView extends StatelessWidget {
                               // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  height: 350.h,
+                                  height: 200.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -204,7 +209,7 @@ class DeshboardDesktopView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 SizedBox(
-                                  height: 700.h,
+                                  height: 500.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -219,7 +224,7 @@ class DeshboardDesktopView extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 150.h,
+                                  height: 100.h,
                                 ),
                                 StackWidget(
                                   text: "Sign-up For Free",

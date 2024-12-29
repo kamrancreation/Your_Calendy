@@ -11,8 +11,11 @@ class DeshboardMaxTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHight = screenSize.height;
     return Container(
-                height: 1800.h,
+                height: screenHight,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -28,7 +31,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                   children: [
                     Container(
                       padding: EdgeInsets.only(
-                          top: 30.h, left: 30.w, right: 90.w),
+                          top: 10.h, left: 30.w, right: 90.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -36,7 +39,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                    text: 'Welcome be ',
+                                    text: 'Welcome to ',
                                     style: GoogleFonts.saira(
                                       fontSize: 50.sp,
                                       fontWeight: FontWeight.w700,
@@ -61,7 +64,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                                 color: const Color(0xffEFF0F6)),
                           ),
                           SizedBox(
-                            height: 35.h,
+                            height: 25.h,
                           ),
                           RichText(
                             text: TextSpan(
@@ -95,7 +98,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            height: 60.h,
+                            height: 20.h,
                           ),
                           StackWidget(
                             text: 'Advantages',
@@ -103,7 +106,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                             width: 167.w,
                           ),
                           SizedBox(
-                            height: 60.h,
+                            height: 20.h,
                           ),
                         ],
                       ),
@@ -119,54 +122,54 @@ class DeshboardMaxTabView extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: 25.h,
-                                ),
+                                // SizedBox(
+                                //   height: 25.h,
+                                // ),
                                 Positioned(
                                   left: 0,
                                   child: const HeroSectionItem(
                                       imgPath: "assets/hero_section2.png",
                                       text: "Appointment History"),
                                 ),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section2.png",
                                     text: "Improved Time Management"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section3.png",
                                     text: "Professionalism"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section4.png",
                                     text: "Time Savings"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section5.png",
                                     text: "Increased Trust"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section6.png",
                                     text: "Increased Revenue"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section7.png",
                                     text: "Improved Communication"),
-                                SizedBox(
-                                  height: 20.h,
-                                ),
+                                // SizedBox(
+                                //   height: 20.h,
+                                // ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section8.png",
                                     text: "Flexibility and Control"),
@@ -183,7 +186,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                               // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  height: 620.h,
+                                  height: 470.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -209,7 +212,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 SizedBox(
-                                  height: 650.h,
+                                  height: 480.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -224,7 +227,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 200.h,
+                                  height: 150.h,
                                 ),
                                 StackWidget(
                                   text: "Sign-up For Free",
@@ -234,7 +237,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(width: 30.w,)
+                          //SizedBox(width: 30.w,)
                         ],
                       ),
                     )

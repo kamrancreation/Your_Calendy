@@ -10,8 +10,11 @@ class DeshboardMinTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHight = screenSize.height;
     return Container(
-                height: 1700.h,
+                height: screenHight,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -27,7 +30,7 @@ class DeshboardMinTabView extends StatelessWidget {
                   children: [
                     Container(
                       padding: EdgeInsets.only(
-                          top: 40.h, left: 30.w, right: 90.w),
+                          top: 10.h, left: 30.w, right: 90.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -35,16 +38,16 @@ class DeshboardMinTabView extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                    text: 'Welcome mini  ',
+                                    text: 'Welcome to ',
                                     style: GoogleFonts.saira(
-                                      fontSize: 45.sp,
+                                      fontSize: 40.sp,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     )),
                                 TextSpan(
                                   text: 'YouCalendy',
                                   style: TextStyle(
-                                    fontSize: 45.sp,
+                                    fontSize: 40.sp,
                                     fontWeight: FontWeight.w700,
                                     color: const Color(0xffB4C9DE),
                                   ),
@@ -55,12 +58,12 @@ class DeshboardMinTabView extends StatelessWidget {
                           Text(
                             "The Ultimate Convenience for Busy People",
                             style: GoogleFonts.acme(
-                                fontSize: 30.sp,
+                                fontSize: 25.sp,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xffEFF0F6)),
                           ),
                           SizedBox(
-                            height: 35.h,
+                            height: 15.h,
                           ),
                           RichText(
                             text: TextSpan(
@@ -69,14 +72,14 @@ class DeshboardMinTabView extends StatelessWidget {
                                     text:
                                         'Organize your barbershop efficiently and professionally \nwith YouCalendy. Forget about out-of-hours calls and \nconfusion in appointment management.\n',
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 20.sp,
+                                      fontSize: 18.sp,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.white,
                                     )),
                                 TextSpan(
                                   text: 'Sign up for free',
                                   style: GoogleFonts.plusJakartaSans(
-                                    fontSize: 20.sp,
+                                    fontSize: 18.sp,
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xffFAE635),
                                     decoration: TextDecoration.underline,
@@ -86,24 +89,22 @@ class DeshboardMinTabView extends StatelessWidget {
                                     text:
                                         ' today and discover how YouCalendy can \ntransform your barbershop',
                                     style: GoogleFonts.plusJakartaSans(
-                                      fontSize: 20.sp,
+                                      fontSize: 18.sp,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.white,
                                     )),
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: 60.h,
-                          ),
+                          // SizedBox(
+                          //   height: 10.h,
+                          // ),
                           StackWidget(
                             text: 'Advantages',
                             hight: 85.h,
                             width: 167.w,
                           ),
-                          SizedBox(
-                            height: 60.h,
-                          ),
+                          
                         ],
                       ),
                     ),
@@ -118,9 +119,7 @@ class DeshboardMinTabView extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: 25.h,
-                                ),
+                                
                                 Positioned(
                                   left: 0,
                                   child: const HeroSectionItem(
@@ -128,43 +127,43 @@ class DeshboardMinTabView extends StatelessWidget {
                                       text: "Appointment History"),
                                 ),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section2.png",
                                     text: "Improved Time Management"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section3.png",
                                     text: "Professionalism"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section4.png",
                                     text: "Time Savings"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section5.png",
                                     text: "Increased Trust"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section6.png",
                                     text: "Increased Revenue"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section7.png",
                                     text: "Improved Communication"),
                                 SizedBox(
-                                  height: 20.h,
+                                  height: 2.h,
                                 ),
                                 const HeroSectionItem(
                                     imgPath: "assets/hero_section8.png",
@@ -182,7 +181,7 @@ class DeshboardMinTabView extends StatelessWidget {
                               // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  height: 600.h,
+                                  height: 440.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -208,7 +207,7 @@ class DeshboardMinTabView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 SizedBox(
-                                  height: 620.h,
+                                  height: 460.h,
                                 ),
                                 Transform(
                                   alignment: Alignment.center,
@@ -223,7 +222,7 @@ class DeshboardMinTabView extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 155.h,
+                                  height: 125.h,
                                 ),
                                 StackWidget(
                                   text: "Sign-up For Free",
