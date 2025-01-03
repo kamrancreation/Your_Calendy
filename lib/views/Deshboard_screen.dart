@@ -7,7 +7,6 @@ import 'package:your_calendy/components/deshboard_desktop_view.dart';
 import 'package:your_calendy/components/deshboard_footer_column.dart';
 import 'package:your_calendy/components/deshboard_max_tab_view.dart';
 import 'package:your_calendy/components/deshboard_mobile_view.dart';
-import 'package:your_calendy/components/hero_section_item.dart';
 import 'package:your_calendy/components/menu_stack_widget.dart';
 import 'package:your_calendy/components/shadow_item.dart';
 import 'package:your_calendy/components/stack_widget.dart';
@@ -27,7 +26,6 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
 
     return SafeArea(
       child: Scaffold(
@@ -37,82 +35,95 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
           child: Column(
             children: [
               Container(
-                height: 110.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  border: Border.all(
-                    width: 1,
-                    color: Colors.white
-                  )
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(width: 20.w,),
-                    Text("YouCalendy",
-                    style: GoogleFonts.aladin(
-                      fontSize: 32.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                    Image.asset("assets/hero_img.png",height: 60.h,),
-                    Spacer(),
-                    Text("Home",
-                    style: GoogleFonts.alike(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                    SizedBox(width: 40.w,),
-                     Text("Advantages",
-                    style: GoogleFonts.alike(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                    SizedBox(width: 40.w,),
-                     Text("Features",
-                    style: GoogleFonts.alike(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                    SizedBox(width: 40.w,),
-                     Text("Login",
-                    style: GoogleFonts.alike(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white
-                    ),),
-                    SizedBox(width: 40.w,),
-                    Center(
-                      child: MenuStackWidget(
-                        text: "Sign-up for Free",
-                        hight: 70.h,
-                        width: 180.w,
-                      ),
-                    ),
-                    SizedBox(width: 20.w,)
-                  ]
-                )
-              ),
-              if(screenWidth >1280)
-              DeshboardDesktopView()
-              else if(screenWidth ==1280)
-              DeshboardMaxTabView()
-              else 
-              DeshboardMinTabView()
-                  ,
+                  height: 110.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      border: Border.all(width: 1, color: Colors.white)),
+                  child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 20.w,
+                        ),
+                        Text(
+                          "YouCalendy",
+                          style: GoogleFonts.aladin(
+                              fontSize: 32.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        Image.asset(
+                          "assets/hero_img.png",
+                          height: 60.h,
+                        ),
+                        const Spacer(),
+                        Text(
+                          "Home",
+                          style: GoogleFonts.alike(
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 40.w,
+                        ),
+                        Text(
+                          "Advantages",
+                          style: GoogleFonts.alike(
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 40.w,
+                        ),
+                        Text(
+                          "Features",
+                          style: GoogleFonts.alike(
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 40.w,
+                        ),
+                        Text(
+                          "Login",
+                          style: GoogleFonts.alike(
+                              fontSize: 20.sp,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 40.w,
+                        ),
+                        Center(
+                          child: MenuStackWidget(
+                            text: "Sign-up for Free",
+                            hight: 70.h,
+                            width: 180.w,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.w,
+                        )
+                      ])),
+              if (screenWidth > 1280)
+                const DashboardDesktopView()
+              else if (screenWidth == 1280)
+                const DeshboardMaxTabView()
+              else
+                const DeshboardMinTabView(),
               Container(
-                //  height: 1100.h,
                 width: double.maxFinite,
                 decoration: BoxDecoration(
-                    color: const Color(0xff003366),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50.r),
-                      topRight: Radius.circular(50.r),
-                    )),
+                  color: const Color(0xff003366),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50.r),
+                    topRight: Radius.circular(50.r),
+                  ),
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -147,35 +158,41 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                       alignment: WrapAlignment.center,
                       children: [
                         CardItem(
-                            discription:
-                                "Your clients can schedule  appointments at any time of the day, even at midnight or during your days  off. No more untimely calls disrupting your rest or personal time.",
-                            imgUrl: "assets/advantages1.png",
-                            title: "24/7 Availability"),
+                          discription:
+                              "Your clients can schedule appointments at any time of the day, even at midnight or during your days off. No more untimely calls disrupting your rest or personal time.",
+                          imgUrl: "assets/advantages1.png",
+                          title: "24/7 Availability",
+                        ),
                         CardItem(
-                            discription:
-                                "YouCalendy automates the appointment scheduling process. Clients can see your availability in real-time and select a convenient time slot without needing to call or message you.",
-                            imgUrl: "assets/advantages2.png",
-                            title: "Automation and Efficiency"),
+                          discription:
+                              "YouCalendy automates the appointment scheduling process. Clients can see your availability in real-time and select a convenient time slot without needing to call or message you.",
+                          imgUrl: "assets/advantages2.png",
+                          title: "Automation and Efficiency",
+                        ),
                         CardItem(
-                            discription:
-                                "Eliminate the stress of  manually managing appointments and responding to calls outside of working  hours. With YouCalendy, you can focus on your work during business hours and enjoy your free time without worries.",
-                            imgUrl: "assets/advantages3.png",
-                            title: "Stress Reduction"),
+                          discription:
+                              "Eliminate the stress of manually managing appointments and responding to calls outside of working hours. With YouCalendy, you can focus on your work during business hours and enjoy your free time without worries.",
+                          imgUrl: "assets/advantages3.png",
+                          title: "Stress Reduction",
+                        ),
                         CardItem(
-                            discription:
-                                "Offer your clients the convenience of scheduling appointments when it suits them best. This flexibility enhances their experience and satisfaction, increasing the likelihood they will return and recommend your services.",
-                            imgUrl: "assets/advantages4.png",
-                            title: "Improved Client Experience"),
+                          discription:
+                              "Offer your clients the convenience of scheduling appointments when it suits them best. This flexibility enhances their experience and satisfaction, increasing the likelihood they will return and recommend your services.",
+                          imgUrl: "assets/advantages4.png",
+                          title: "Improved Client Experience",
+                        ),
                         CardItem(
-                            discription:
-                                "YouCalendy sends automatic reminders to your clients about their appointments, reducing no-show rates and helping you maintain an organized schedule.",
-                            imgUrl: "assets/advantages5.png",
-                            title: "Automatic Reminders"),
+                          discription:
+                              "YouCalendy sends automatic reminders to your clients about their appointments, reducing no-show rates and helping you maintain an organized schedule.",
+                          imgUrl: "assets/advantages5.png",
+                          title: "Automatic Reminders",
+                        ),
                         CardItem(
-                            discription:
-                                "Set your availability according to your preferences. You can block specific times, add days off, and adjust your calendar to fit your personal and professional needs.",
-                            imgUrl: "assets/advantages6.png",
-                            title: "Customization"),
+                          discription:
+                              "Set your availability according to your preferences. You can block specific times, add days off, and adjust your calendar to fit your personal and professional needs.",
+                          imgUrl: "assets/advantages6.png",
+                          title: "Customization",
+                        ),
                       ],
                     ),
                     SizedBox(
@@ -586,13 +603,13 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                 ),
               ),
               Container(
-                color: Color(0xff003366),
+                color: const Color(0xff003366),
                 child: Column(
                   children: [
                     const Divider(),
                     Container(
                       padding: EdgeInsets.only(left: 50.w, right: 50.w),
-                      color: Color(0xff003366),
+                      color: const Color(0xff003366),
                       height: 250.h,
                       width: double.maxFinite,
                       child: Row(
@@ -625,8 +642,8 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                     const Divider(),
                     Container(
                       color: Colors.transparent,
-                      padding:
-                          EdgeInsets.only(top: 110.h, left: 50.w, right: 50.w,bottom: 30.h),
+                      padding: EdgeInsets.only(
+                          top: 110.h, left: 50.w, right: 50.w, bottom: 30.h),
                       width: double.maxFinite,
                       child: Column(
                         children: [
@@ -716,7 +733,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                                       decoration: InputDecoration(
                                         hintText: 'Enter your email',
                                         hintStyle: GoogleFonts.dmSans(
-                                          color: Color(0xff003366),
+                                          color: const Color(0xff003366),
                                           fontSize: 14.sp,
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -736,7 +753,7 @@ class _Deshboard_screenState extends State<Deshboard_screen> {
                                         color: Colors.black,
                                         fontSize: 14.sp,
                                       ),
-                                      cursorColor: Color(0xff003366),
+                                      cursorColor: const Color(0xff003366),
                                     ),
                                     SizedBox(
                                       height: 30.h,
