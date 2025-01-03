@@ -12,12 +12,11 @@ class DeshboardMaxTabView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
     final screenHight = screenSize.height;
     return Container(
                 height: screenHight,
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
                         'assets/background_image.png',), // Path to your image
@@ -117,7 +116,7 @@ class DeshboardMaxTabView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Expanded(
+                          const Expanded(
                             flex: 2,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,50 +126,50 @@ class DeshboardMaxTabView extends StatelessWidget {
                                 // ),
                                 Positioned(
                                   left: 0,
-                                  child: const HeroSectionItem(
+                                  child: HeroSectionItem(
                                       imgPath: "assets/hero_section2.png",
                                       text: "Appointment History"),
                                 ),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section2.png",
                                     text: "Improved Time Management"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section3.png",
                                     text: "Professionalism"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section4.png",
                                     text: "Time Savings"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section5.png",
                                     text: "Increased Trust"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section6.png",
                                     text: "Increased Revenue"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section7.png",
                                     text: "Improved Communication"),
                                 // SizedBox(
                                 //   height: 20.h,
                                 // ),
-                                const HeroSectionItem(
+                                HeroSectionItem(
                                     imgPath: "assets/hero_section8.png",
                                     text: "Flexibility and Control"),
                                 // Align(
